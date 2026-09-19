@@ -1,0 +1,13 @@
+services:
+  eva-planner:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      EVA_LIVE_DATA: "1"
+      EVA_CACHE_DIR: /app/data/cache
+    volumes:
+      - ./data/cache:/app/data/cache
+      - ./data/results:/app/data/results
+      - ./data/archive:/app/data/archive:ro
+    restart: unless-stopped

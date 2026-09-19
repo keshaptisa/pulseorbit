@@ -1,0 +1,39 @@
+{
+  "scope": "Observed >10 MeV proton events at geosynchronous orbit reported by NOAA SWPC weekly PRF reports",
+  "coverage_start": "2024-05-01T00:00:00Z",
+  "coverage_end": "2024-06-30T23:59:59Z",
+  "events": [
+    {
+      "start": "2024-05-10T13:35:00Z",
+      "end": "2024-05-12T12:35:00Z",
+      "peak_pfu": 207,
+      "source": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/weekly_reports/PRFs_of_SGD/2024/05/prf2541.pdf",
+      "source_report": "SWPC PRF 2541",
+      "source_local": "data/archive/noaa/weekly/prf2541.pdf",
+      "statement": "10 MeV at 10 pfu event; peak 207 pfu"
+    },
+    {
+      "start": "2024-05-13T14:00:00Z",
+      "end": "2024-05-16T14:55:00Z",
+      "peak_pfu": 121,
+      "source": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/weekly_reports/PRFs_of_SGD/2024/05/prf2542.pdf",
+      "source_report": "SWPC PRF 2542",
+      "source_local": "data/archive/noaa/weekly/prf2542.pdf",
+      "statement": "10 MeV levels reached 10 pfu; peak 121 pfu"
+    }
+  ],
+  "negative_coverage_reports": [
+    "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/weekly_reports/PRFs_of_SGD/2024/04/prf2539.pdf",
+    "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/weekly_reports/PRFs_of_SGD/2024/05/prf2540.pdf",
+    "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/weekly_reports/PRFs_of_SGD/2024/05/prf2543.pdf",
+    "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/weekly_reports/PRFs_of_SGD/2024/06/prf2544.pdf",
+    "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/weekly_reports/PRFs_of_SGD/2024/06/prf2545.pdf",
+    "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/weekly_reports/PRFs_of_SGD/2024/06/prf2546.pdf",
+    "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/weekly_reports/PRFs_of_SGD/2024/06/prf2547.pdf",
+    "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/weekly_reports/PRFs_of_SGD/2024/07/prf2548.pdf"
+  ],
+  "limitations": [
+    "Daily labels indicate whether an observed event overlaps a UTC day; they do not represent astronaut dose.",
+    "Weekly reports are retrospective observations and are used only as labels, never as replay inputs."
+  ]
+}

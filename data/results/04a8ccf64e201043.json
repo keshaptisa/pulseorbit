@@ -1,0 +1,1934 @@
+{
+  "result_id": "04a8ccf64e201043",
+  "saved_at": "2026-09-19T15:14:51.803889+00:00",
+  "content_sha256": "04a8ccf64e201043eb72ae27fb1f8d47727a7a3df8acc75bb3980d927bc5e673",
+  "result": {
+    "request": {
+      "mode": "current",
+      "start": "2026-09-19T16:00:00Z",
+      "duration_hours": 8.0,
+      "search_hours": 6.0,
+      "step_minutes": 30,
+      "cutoff": null,
+      "disabled_sources": [],
+      "continuous_lighting_required": false,
+      "force_refresh": false,
+      "operation_profile": "standard_eva",
+      "policy_version": "demo-policy-2026-09",
+      "crew_dose_rate_usv_h": null,
+      "crew_dose_limit_usv_h": null,
+      "dosimetry_timestamp": null
+    },
+    "generated_at": "2026-09-19T15:14:51.803889Z",
+    "algorithm_version": "1.0.1-nasa-historical-geometry",
+    "data_notice": "Подключённые источники обработаны. Это исследовательский прототип, а не допуск к ВКД.",
+    "recommendation": "Несколько окон равноценны по доступным данным",
+    "rationale": [
+      "Минимальную оценку 0 получили 13 окон.",
+      "Для окончательного выбора нужны реальные оперативные данные и ограничения конкретных работ."
+    ],
+    "windows": [
+      {
+        "start": "2026-09-19T16:00:00Z",
+        "end": "2026-09-20T00:00:00Z",
+        "severity": "low",
+        "completeness": "подключённые источники обработаны",
+        "score": 0,
+        "factors": [
+          {
+            "factor_id": "space-weather-s",
+            "name": "Радиационная буря NOAA S",
+            "mechanism": "Космическая погода: S",
+            "severity": "low",
+            "overlap_minutes": 480,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Прогноз S покрывает окно: 1%; пересечение 480 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA S",
+                "value": "1%",
+                "unit": null,
+                "observed_at": "2026-09-19T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA probability S: 1%"
+              }
+            ]
+          },
+          {
+            "factor_id": "space-weather-g",
+            "name": "Геомагнитная буря NOAA G",
+            "mechanism": "Космическая погода: G",
+            "severity": "low",
+            "overlap_minutes": 120,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "NOAA S/G/R: уровни 1-2 требуют внимания, 3-5 имеют высокий уровень.",
+            "decision_relevant": true,
+            "summary": "Прогноз G покрывает окно: Kp 0.67; пересечение 120 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA G",
+                "value": "Kp 0.67",
+                "unit": null,
+                "observed_at": "2026-09-19T15:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA predicted Kp 0.67"
+              }
+            ]
+          },
+          {
+            "factor_id": "space-weather-r",
+            "name": "Радионарушения NOAA R",
+            "mechanism": "Космическая погода: R",
+            "severity": "low",
+            "overlap_minutes": 480,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Прогноз R покрывает окно: 1%; пересечение 480 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA R",
+                "value": "1%",
+                "unit": null,
+                "observed_at": "2026-09-19T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA probability R: 1%"
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "info",
+            "overlap_minutes": 180,
+            "confidence": "средняя",
+            "confidence_basis": "SGP4 по датированному TLE с шагом 10 минут; модель не учитывает полутень и геометрию рабочего места.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 180 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "180",
+                "unit": "мин пересечения",
+                "observed_at": "2026-09-19T16:00:00Z",
+                "published_at": null,
+                "source_name": "SGP4 + analytical Sun model",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-b47f6125f0b1",
+                "record_sha256": null,
+                "note": "Расчёт команды по орбитальной траектории и направлению на Солнце."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "start": "2026-09-19T16:30:00Z",
+        "end": "2026-09-20T00:30:00Z",
+        "severity": "low",
+        "completeness": "подключённые источники обработаны",
+        "score": 0,
+        "factors": [
+          {
+            "factor_id": "space-weather-s",
+            "name": "Радиационная буря NOAA S",
+            "mechanism": "Космическая погода: S",
+            "severity": "low",
+            "overlap_minutes": 450,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Прогноз S покрывает окно: 1%; пересечение 450 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA S",
+                "value": "1%",
+                "unit": null,
+                "observed_at": "2026-09-19T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA probability S: 1%"
+              }
+            ]
+          },
+          {
+            "factor_id": "space-weather-g",
+            "name": "Геомагнитная буря NOAA G",
+            "mechanism": "Космическая погода: G",
+            "severity": "low",
+            "overlap_minutes": 30,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "NOAA S/G/R: уровни 1-2 требуют внимания, 3-5 имеют высокий уровень.",
+            "decision_relevant": true,
+            "summary": "Прогноз G покрывает окно: Kp 1.67; пересечение 30 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA G",
+                "value": "Kp 1.67",
+                "unit": null,
+                "observed_at": "2026-09-20T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA predicted Kp 1.67"
+              }
+            ]
+          },
+          {
+            "factor_id": "space-weather-r",
+            "name": "Радионарушения NOAA R",
+            "mechanism": "Космическая погода: R",
+            "severity": "low",
+            "overlap_minutes": 450,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Прогноз R покрывает окно: 1%; пересечение 450 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA R",
+                "value": "1%",
+                "unit": null,
+                "observed_at": "2026-09-19T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA probability R: 1%"
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "info",
+            "overlap_minutes": 170,
+            "confidence": "средняя",
+            "confidence_basis": "SGP4 по датированному TLE с шагом 10 минут; модель не учитывает полутень и геометрию рабочего места.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 170 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "170",
+                "unit": "мин пересечения",
+                "observed_at": "2026-09-19T16:30:00Z",
+                "published_at": null,
+                "source_name": "SGP4 + analytical Sun model",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-b47f6125f0b1",
+                "record_sha256": null,
+                "note": "Расчёт команды по орбитальной траектории и направлению на Солнце."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "start": "2026-09-19T17:00:00Z",
+        "end": "2026-09-20T01:00:00Z",
+        "severity": "low",
+        "completeness": "подключённые источники обработаны",
+        "score": 0,
+        "factors": [
+          {
+            "factor_id": "space-weather-s",
+            "name": "Радиационная буря NOAA S",
+            "mechanism": "Космическая погода: S",
+            "severity": "low",
+            "overlap_minutes": 420,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Прогноз S покрывает окно: 1%; пересечение 420 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA S",
+                "value": "1%",
+                "unit": null,
+                "observed_at": "2026-09-19T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA probability S: 1%"
+              }
+            ]
+          },
+          {
+            "factor_id": "space-weather-g",
+            "name": "Геомагнитная буря NOAA G",
+            "mechanism": "Космическая погода: G",
+            "severity": "low",
+            "overlap_minutes": 60,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "NOAA S/G/R: уровни 1-2 требуют внимания, 3-5 имеют высокий уровень.",
+            "decision_relevant": true,
+            "summary": "Прогноз G покрывает окно: Kp 1.67; пересечение 60 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA G",
+                "value": "Kp 1.67",
+                "unit": null,
+                "observed_at": "2026-09-20T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA predicted Kp 1.67"
+              }
+            ]
+          },
+          {
+            "factor_id": "space-weather-r",
+            "name": "Радионарушения NOAA R",
+            "mechanism": "Космическая погода: R",
+            "severity": "low",
+            "overlap_minutes": 420,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Прогноз R покрывает окно: 1%; пересечение 420 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA R",
+                "value": "1%",
+                "unit": null,
+                "observed_at": "2026-09-19T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA probability R: 1%"
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "info",
+            "overlap_minutes": 180,
+            "confidence": "средняя",
+            "confidence_basis": "SGP4 по датированному TLE с шагом 10 минут; модель не учитывает полутень и геометрию рабочего места.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 180 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "180",
+                "unit": "мин пересечения",
+                "observed_at": "2026-09-19T17:00:00Z",
+                "published_at": null,
+                "source_name": "SGP4 + analytical Sun model",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-b47f6125f0b1",
+                "record_sha256": null,
+                "note": "Расчёт команды по орбитальной траектории и направлению на Солнце."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "start": "2026-09-19T17:30:00Z",
+        "end": "2026-09-20T01:30:00Z",
+        "severity": "low",
+        "completeness": "подключённые источники обработаны",
+        "score": 0,
+        "factors": [
+          {
+            "factor_id": "space-weather-s",
+            "name": "Радиационная буря NOAA S",
+            "mechanism": "Космическая погода: S",
+            "severity": "low",
+            "overlap_minutes": 390,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Прогноз S покрывает окно: 1%; пересечение 390 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA S",
+                "value": "1%",
+                "unit": null,
+                "observed_at": "2026-09-19T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA probability S: 1%"
+              }
+            ]
+          },
+          {
+            "factor_id": "space-weather-g",
+            "name": "Геомагнитная буря NOAA G",
+            "mechanism": "Космическая погода: G",
+            "severity": "low",
+            "overlap_minutes": 90,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "NOAA S/G/R: уровни 1-2 требуют внимания, 3-5 имеют высокий уровень.",
+            "decision_relevant": true,
+            "summary": "Прогноз G покрывает окно: Kp 1.67; пересечение 90 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA G",
+                "value": "Kp 1.67",
+                "unit": null,
+                "observed_at": "2026-09-20T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA predicted Kp 1.67"
+              }
+            ]
+          },
+          {
+            "factor_id": "space-weather-r",
+            "name": "Радионарушения NOAA R",
+            "mechanism": "Космическая погода: R",
+            "severity": "low",
+            "overlap_minutes": 390,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Прогноз R покрывает окно: 1%; пересечение 390 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA R",
+                "value": "1%",
+                "unit": null,
+                "observed_at": "2026-09-19T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA probability R: 1%"
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "info",
+            "overlap_minutes": 190,
+            "confidence": "средняя",
+            "confidence_basis": "SGP4 по датированному TLE с шагом 10 минут; модель не учитывает полутень и геометрию рабочего места.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 190 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "190",
+                "unit": "мин пересечения",
+                "observed_at": "2026-09-19T17:30:00Z",
+                "published_at": null,
+                "source_name": "SGP4 + analytical Sun model",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-b47f6125f0b1",
+                "record_sha256": null,
+                "note": "Расчёт команды по орбитальной траектории и направлению на Солнце."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "start": "2026-09-19T18:00:00Z",
+        "end": "2026-09-20T02:00:00Z",
+        "severity": "low",
+        "completeness": "подключённые источники обработаны",
+        "score": 0,
+        "factors": [
+          {
+            "factor_id": "space-weather-s",
+            "name": "Радиационная буря NOAA S",
+            "mechanism": "Космическая погода: S",
+            "severity": "low",
+            "overlap_minutes": 360,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Прогноз S покрывает окно: 1%; пересечение 360 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA S",
+                "value": "1%",
+                "unit": null,
+                "observed_at": "2026-09-19T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA probability S: 1%"
+              }
+            ]
+          },
+          {
+            "factor_id": "space-weather-g",
+            "name": "Геомагнитная буря NOAA G",
+            "mechanism": "Космическая погода: G",
+            "severity": "low",
+            "overlap_minutes": 120,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "NOAA S/G/R: уровни 1-2 требуют внимания, 3-5 имеют высокий уровень.",
+            "decision_relevant": true,
+            "summary": "Прогноз G покрывает окно: Kp 1.67; пересечение 120 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA G",
+                "value": "Kp 1.67",
+                "unit": null,
+                "observed_at": "2026-09-20T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA predicted Kp 1.67"
+              }
+            ]
+          },
+          {
+            "factor_id": "space-weather-r",
+            "name": "Радионарушения NOAA R",
+            "mechanism": "Космическая погода: R",
+            "severity": "low",
+            "overlap_minutes": 360,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Прогноз R покрывает окно: 1%; пересечение 360 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA R",
+                "value": "1%",
+                "unit": null,
+                "observed_at": "2026-09-19T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA probability R: 1%"
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "info",
+            "overlap_minutes": 180,
+            "confidence": "средняя",
+            "confidence_basis": "SGP4 по датированному TLE с шагом 10 минут; модель не учитывает полутень и геометрию рабочего места.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 180 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "180",
+                "unit": "мин пересечения",
+                "observed_at": "2026-09-19T18:00:00Z",
+                "published_at": null,
+                "source_name": "SGP4 + analytical Sun model",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-b47f6125f0b1",
+                "record_sha256": null,
+                "note": "Расчёт команды по орбитальной траектории и направлению на Солнце."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "start": "2026-09-19T18:30:00Z",
+        "end": "2026-09-20T02:30:00Z",
+        "severity": "low",
+        "completeness": "подключённые источники обработаны",
+        "score": 0,
+        "factors": [
+          {
+            "factor_id": "space-weather-s",
+            "name": "Радиационная буря NOAA S",
+            "mechanism": "Космическая погода: S",
+            "severity": "low",
+            "overlap_minutes": 330,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Прогноз S покрывает окно: 1%; пересечение 330 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA S",
+                "value": "1%",
+                "unit": null,
+                "observed_at": "2026-09-19T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA probability S: 1%"
+              }
+            ]
+          },
+          {
+            "factor_id": "space-weather-g",
+            "name": "Геомагнитная буря NOAA G",
+            "mechanism": "Космическая погода: G",
+            "severity": "low",
+            "overlap_minutes": 150,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "NOAA S/G/R: уровни 1-2 требуют внимания, 3-5 имеют высокий уровень.",
+            "decision_relevant": true,
+            "summary": "Прогноз G покрывает окно: Kp 1.67; пересечение 150 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA G",
+                "value": "Kp 1.67",
+                "unit": null,
+                "observed_at": "2026-09-20T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA predicted Kp 1.67"
+              }
+            ]
+          },
+          {
+            "factor_id": "space-weather-r",
+            "name": "Радионарушения NOAA R",
+            "mechanism": "Космическая погода: R",
+            "severity": "low",
+            "overlap_minutes": 330,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Прогноз R покрывает окно: 1%; пересечение 330 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA R",
+                "value": "1%",
+                "unit": null,
+                "observed_at": "2026-09-19T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA probability R: 1%"
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "info",
+            "overlap_minutes": 190,
+            "confidence": "средняя",
+            "confidence_basis": "SGP4 по датированному TLE с шагом 10 минут; модель не учитывает полутень и геометрию рабочего места.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 190 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "190",
+                "unit": "мин пересечения",
+                "observed_at": "2026-09-19T18:30:00Z",
+                "published_at": null,
+                "source_name": "SGP4 + analytical Sun model",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-b47f6125f0b1",
+                "record_sha256": null,
+                "note": "Расчёт команды по орбитальной траектории и направлению на Солнце."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "start": "2026-09-19T19:00:00Z",
+        "end": "2026-09-20T03:00:00Z",
+        "severity": "low",
+        "completeness": "подключённые источники обработаны",
+        "score": 0,
+        "factors": [
+          {
+            "factor_id": "space-weather-s",
+            "name": "Радиационная буря NOAA S",
+            "mechanism": "Космическая погода: S",
+            "severity": "low",
+            "overlap_minutes": 300,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Прогноз S покрывает окно: 1%; пересечение 300 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA S",
+                "value": "1%",
+                "unit": null,
+                "observed_at": "2026-09-19T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA probability S: 1%"
+              }
+            ]
+          },
+          {
+            "factor_id": "space-weather-g",
+            "name": "Геомагнитная буря NOAA G",
+            "mechanism": "Космическая погода: G",
+            "severity": "low",
+            "overlap_minutes": 180,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "NOAA S/G/R: уровни 1-2 требуют внимания, 3-5 имеют высокий уровень.",
+            "decision_relevant": true,
+            "summary": "Прогноз G покрывает окно: Kp 1.67; пересечение 180 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA G",
+                "value": "Kp 1.67",
+                "unit": null,
+                "observed_at": "2026-09-20T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA predicted Kp 1.67"
+              }
+            ]
+          },
+          {
+            "factor_id": "space-weather-r",
+            "name": "Радионарушения NOAA R",
+            "mechanism": "Космическая погода: R",
+            "severity": "low",
+            "overlap_minutes": 300,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Прогноз R покрывает окно: 1%; пересечение 300 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA R",
+                "value": "1%",
+                "unit": null,
+                "observed_at": "2026-09-19T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA probability R: 1%"
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "info",
+            "overlap_minutes": 200,
+            "confidence": "средняя",
+            "confidence_basis": "SGP4 по датированному TLE с шагом 10 минут; модель не учитывает полутень и геометрию рабочего места.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 200 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "200",
+                "unit": "мин пересечения",
+                "observed_at": "2026-09-19T19:00:00Z",
+                "published_at": null,
+                "source_name": "SGP4 + analytical Sun model",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-b47f6125f0b1",
+                "record_sha256": null,
+                "note": "Расчёт команды по орбитальной траектории и направлению на Солнце."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "start": "2026-09-19T19:30:00Z",
+        "end": "2026-09-20T03:30:00Z",
+        "severity": "low",
+        "completeness": "подключённые источники обработаны",
+        "score": 0,
+        "factors": [
+          {
+            "factor_id": "space-weather-s",
+            "name": "Радиационная буря NOAA S",
+            "mechanism": "Космическая погода: S",
+            "severity": "low",
+            "overlap_minutes": 270,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Прогноз S покрывает окно: 1%; пересечение 270 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA S",
+                "value": "1%",
+                "unit": null,
+                "observed_at": "2026-09-19T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA probability S: 1%"
+              }
+            ]
+          },
+          {
+            "factor_id": "space-weather-g",
+            "name": "Геомагнитная буря NOAA G",
+            "mechanism": "Космическая погода: G",
+            "severity": "low",
+            "overlap_minutes": 180,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "NOAA S/G/R: уровни 1-2 требуют внимания, 3-5 имеют высокий уровень.",
+            "decision_relevant": true,
+            "summary": "Прогноз G покрывает окно: Kp 1.67; пересечение 180 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA G",
+                "value": "Kp 1.67",
+                "unit": null,
+                "observed_at": "2026-09-20T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA predicted Kp 1.67"
+              }
+            ]
+          },
+          {
+            "factor_id": "space-weather-r",
+            "name": "Радионарушения NOAA R",
+            "mechanism": "Космическая погода: R",
+            "severity": "low",
+            "overlap_minutes": 270,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Прогноз R покрывает окно: 1%; пересечение 270 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA R",
+                "value": "1%",
+                "unit": null,
+                "observed_at": "2026-09-19T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA probability R: 1%"
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "info",
+            "overlap_minutes": 180,
+            "confidence": "средняя",
+            "confidence_basis": "SGP4 по датированному TLE с шагом 10 минут; модель не учитывает полутень и геометрию рабочего места.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 180 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "180",
+                "unit": "мин пересечения",
+                "observed_at": "2026-09-19T19:30:00Z",
+                "published_at": null,
+                "source_name": "SGP4 + analytical Sun model",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-b47f6125f0b1",
+                "record_sha256": null,
+                "note": "Расчёт команды по орбитальной траектории и направлению на Солнце."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "start": "2026-09-19T20:00:00Z",
+        "end": "2026-09-20T04:00:00Z",
+        "severity": "low",
+        "completeness": "подключённые источники обработаны",
+        "score": 0,
+        "factors": [
+          {
+            "factor_id": "space-weather-s",
+            "name": "Радиационная буря NOAA S",
+            "mechanism": "Космическая погода: S",
+            "severity": "low",
+            "overlap_minutes": 240,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Прогноз S покрывает окно: 1%; пересечение 240 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA S",
+                "value": "1%",
+                "unit": null,
+                "observed_at": "2026-09-19T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA probability S: 1%"
+              }
+            ]
+          },
+          {
+            "factor_id": "space-weather-g",
+            "name": "Геомагнитная буря NOAA G",
+            "mechanism": "Космическая погода: G",
+            "severity": "low",
+            "overlap_minutes": 180,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "NOAA S/G/R: уровни 1-2 требуют внимания, 3-5 имеют высокий уровень.",
+            "decision_relevant": true,
+            "summary": "Прогноз G покрывает окно: Kp 1.67; пересечение 180 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA G",
+                "value": "Kp 1.67",
+                "unit": null,
+                "observed_at": "2026-09-20T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA predicted Kp 1.67"
+              }
+            ]
+          },
+          {
+            "factor_id": "space-weather-r",
+            "name": "Радионарушения NOAA R",
+            "mechanism": "Космическая погода: R",
+            "severity": "low",
+            "overlap_minutes": 240,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Прогноз R покрывает окно: 1%; пересечение 240 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA R",
+                "value": "1%",
+                "unit": null,
+                "observed_at": "2026-09-19T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA probability R: 1%"
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "info",
+            "overlap_minutes": 180,
+            "confidence": "средняя",
+            "confidence_basis": "SGP4 по датированному TLE с шагом 10 минут; модель не учитывает полутень и геометрию рабочего места.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 180 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "180",
+                "unit": "мин пересечения",
+                "observed_at": "2026-09-19T20:00:00Z",
+                "published_at": null,
+                "source_name": "SGP4 + analytical Sun model",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-b47f6125f0b1",
+                "record_sha256": null,
+                "note": "Расчёт команды по орбитальной траектории и направлению на Солнце."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "start": "2026-09-19T20:30:00Z",
+        "end": "2026-09-20T04:30:00Z",
+        "severity": "low",
+        "completeness": "подключённые источники обработаны",
+        "score": 0,
+        "factors": [
+          {
+            "factor_id": "space-weather-s",
+            "name": "Радиационная буря NOAA S",
+            "mechanism": "Космическая погода: S",
+            "severity": "low",
+            "overlap_minutes": 210,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Прогноз S покрывает окно: 1%; пересечение 210 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA S",
+                "value": "1%",
+                "unit": null,
+                "observed_at": "2026-09-19T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA probability S: 1%"
+              }
+            ]
+          },
+          {
+            "factor_id": "space-weather-g",
+            "name": "Геомагнитная буря NOAA G",
+            "mechanism": "Космическая погода: G",
+            "severity": "low",
+            "overlap_minutes": 180,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "NOAA S/G/R: уровни 1-2 требуют внимания, 3-5 имеют высокий уровень.",
+            "decision_relevant": true,
+            "summary": "Прогноз G покрывает окно: Kp 1.67; пересечение 180 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA G",
+                "value": "Kp 1.67",
+                "unit": null,
+                "observed_at": "2026-09-20T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA predicted Kp 1.67"
+              }
+            ]
+          },
+          {
+            "factor_id": "space-weather-r",
+            "name": "Радионарушения NOAA R",
+            "mechanism": "Космическая погода: R",
+            "severity": "low",
+            "overlap_minutes": 210,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Прогноз R покрывает окно: 1%; пересечение 210 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA R",
+                "value": "1%",
+                "unit": null,
+                "observed_at": "2026-09-19T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA probability R: 1%"
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "info",
+            "overlap_minutes": 190,
+            "confidence": "средняя",
+            "confidence_basis": "SGP4 по датированному TLE с шагом 10 минут; модель не учитывает полутень и геометрию рабочего места.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 190 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "190",
+                "unit": "мин пересечения",
+                "observed_at": "2026-09-19T20:30:00Z",
+                "published_at": null,
+                "source_name": "SGP4 + analytical Sun model",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-b47f6125f0b1",
+                "record_sha256": null,
+                "note": "Расчёт команды по орбитальной траектории и направлению на Солнце."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "start": "2026-09-19T21:00:00Z",
+        "end": "2026-09-20T05:00:00Z",
+        "severity": "low",
+        "completeness": "подключённые источники обработаны",
+        "score": 0,
+        "factors": [
+          {
+            "factor_id": "space-weather-s",
+            "name": "Радиационная буря NOAA S",
+            "mechanism": "Космическая погода: S",
+            "severity": "low",
+            "overlap_minutes": 180,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Прогноз S покрывает окно: 1%; пересечение 180 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA S",
+                "value": "1%",
+                "unit": null,
+                "observed_at": "2026-09-19T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA probability S: 1%"
+              }
+            ]
+          },
+          {
+            "factor_id": "space-weather-g",
+            "name": "Геомагнитная буря NOAA G",
+            "mechanism": "Космическая погода: G",
+            "severity": "low",
+            "overlap_minutes": 180,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "NOAA S/G/R: уровни 1-2 требуют внимания, 3-5 имеют высокий уровень.",
+            "decision_relevant": true,
+            "summary": "Прогноз G покрывает окно: Kp 1.67; пересечение 180 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA G",
+                "value": "Kp 1.67",
+                "unit": null,
+                "observed_at": "2026-09-20T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA predicted Kp 1.67"
+              }
+            ]
+          },
+          {
+            "factor_id": "space-weather-r",
+            "name": "Радионарушения NOAA R",
+            "mechanism": "Космическая погода: R",
+            "severity": "low",
+            "overlap_minutes": 180,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Прогноз R покрывает окно: 1%; пересечение 180 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA R",
+                "value": "1%",
+                "unit": null,
+                "observed_at": "2026-09-19T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA probability R: 1%"
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "info",
+            "overlap_minutes": 170,
+            "confidence": "средняя",
+            "confidence_basis": "SGP4 по датированному TLE с шагом 10 минут; модель не учитывает полутень и геометрию рабочего места.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 170 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "170",
+                "unit": "мин пересечения",
+                "observed_at": "2026-09-19T21:00:00Z",
+                "published_at": null,
+                "source_name": "SGP4 + analytical Sun model",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-b47f6125f0b1",
+                "record_sha256": null,
+                "note": "Расчёт команды по орбитальной траектории и направлению на Солнце."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "start": "2026-09-19T21:30:00Z",
+        "end": "2026-09-20T05:30:00Z",
+        "severity": "low",
+        "completeness": "подключённые источники обработаны",
+        "score": 0,
+        "factors": [
+          {
+            "factor_id": "space-weather-s",
+            "name": "Радиационная буря NOAA S",
+            "mechanism": "Космическая погода: S",
+            "severity": "low",
+            "overlap_minutes": 150,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Прогноз S покрывает окно: 1%; пересечение 150 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA S",
+                "value": "1%",
+                "unit": null,
+                "observed_at": "2026-09-19T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA probability S: 1%"
+              }
+            ]
+          },
+          {
+            "factor_id": "space-weather-g",
+            "name": "Геомагнитная буря NOAA G",
+            "mechanism": "Космическая погода: G",
+            "severity": "low",
+            "overlap_minutes": 180,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "NOAA S/G/R: уровни 1-2 требуют внимания, 3-5 имеют высокий уровень.",
+            "decision_relevant": true,
+            "summary": "Прогноз G покрывает окно: Kp 1.67; пересечение 180 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA G",
+                "value": "Kp 1.67",
+                "unit": null,
+                "observed_at": "2026-09-20T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA predicted Kp 1.67"
+              }
+            ]
+          },
+          {
+            "factor_id": "space-weather-r",
+            "name": "Радионарушения NOAA R",
+            "mechanism": "Космическая погода: R",
+            "severity": "low",
+            "overlap_minutes": 150,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Прогноз R покрывает окно: 1%; пересечение 150 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA R",
+                "value": "1%",
+                "unit": null,
+                "observed_at": "2026-09-19T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA probability R: 1%"
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "info",
+            "overlap_minutes": 170,
+            "confidence": "средняя",
+            "confidence_basis": "SGP4 по датированному TLE с шагом 10 минут; модель не учитывает полутень и геометрию рабочего места.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 170 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "170",
+                "unit": "мин пересечения",
+                "observed_at": "2026-09-19T21:30:00Z",
+                "published_at": null,
+                "source_name": "SGP4 + analytical Sun model",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-b47f6125f0b1",
+                "record_sha256": null,
+                "note": "Расчёт команды по орбитальной траектории и направлению на Солнце."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "start": "2026-09-19T22:00:00Z",
+        "end": "2026-09-20T06:00:00Z",
+        "severity": "low",
+        "completeness": "подключённые источники обработаны",
+        "score": 0,
+        "factors": [
+          {
+            "factor_id": "space-weather-s",
+            "name": "Радиационная буря NOAA S",
+            "mechanism": "Космическая погода: S",
+            "severity": "low",
+            "overlap_minutes": 120,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Прогноз S покрывает окно: 1%; пересечение 120 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA S",
+                "value": "1%",
+                "unit": null,
+                "observed_at": "2026-09-19T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA probability S: 1%"
+              }
+            ]
+          },
+          {
+            "factor_id": "space-weather-g",
+            "name": "Геомагнитная буря NOAA G",
+            "mechanism": "Космическая погода: G",
+            "severity": "low",
+            "overlap_minutes": 180,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "NOAA S/G/R: уровни 1-2 требуют внимания, 3-5 имеют высокий уровень.",
+            "decision_relevant": true,
+            "summary": "Прогноз G покрывает окно: Kp 1.67; пересечение 180 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA G",
+                "value": "Kp 1.67",
+                "unit": null,
+                "observed_at": "2026-09-20T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA predicted Kp 1.67"
+              }
+            ]
+          },
+          {
+            "factor_id": "space-weather-r",
+            "name": "Радионарушения NOAA R",
+            "mechanism": "Космическая погода: R",
+            "severity": "low",
+            "overlap_minutes": 120,
+            "confidence": "средняя",
+            "confidence_basis": "Датированный внешний прогноз NOAA; локальная доза и состояние конкретного канала не измеряются.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Прогноз R покрывает окно: 1%; пересечение 120 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA R",
+                "value": "1%",
+                "unit": null,
+                "observed_at": "2026-09-19T00:00:00Z",
+                "published_at": "2026-09-19T12:30:00Z",
+                "source_name": "NOAA SWPC 3-day forecast",
+                "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+                "record_id": "noaa-3-day-forecast",
+                "record_sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+                "note": "NOAA probability R: 1%"
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "info",
+            "overlap_minutes": 190,
+            "confidence": "средняя",
+            "confidence_basis": "SGP4 по датированному TLE с шагом 10 минут; модель не учитывает полутень и геометрию рабочего места.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 190 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "190",
+                "unit": "мин пересечения",
+                "observed_at": "2026-09-19T22:00:00Z",
+                "published_at": null,
+                "source_name": "SGP4 + analytical Sun model",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-b47f6125f0b1",
+                "record_sha256": null,
+                "note": "Расчёт команды по орбитальной траектории и направлению на Солнце."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "source_status": [
+      {
+        "source_id": "noaa-alerts",
+        "name": "NOAA SWPC alerts",
+        "status": "fresh",
+        "last_success": "2026-09-19T14:48:15.123009Z",
+        "age_minutes": 27,
+        "is_synthetic": false,
+        "url": "https://services.swpc.noaa.gov/products/alerts.json",
+        "sha256": "2586b0a5031bab5da9a8a20230d1efaacb9e1820d437dd888e17cb633fe750f0",
+        "product_timestamp": "2026-09-15T19:38:03.320000Z",
+        "product_age_minutes": 5497,
+        "coverage": "S/G/R alerts"
+      },
+      {
+        "source_id": "noaa-3-day-forecast",
+        "name": "NOAA SWPC 3-day forecast",
+        "status": "fresh",
+        "last_success": "2026-09-19T14:48:18.611450Z",
+        "age_minutes": 27,
+        "is_synthetic": false,
+        "url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+        "sha256": "66e2f859ba8abd0531db3346c4a77c853faeee23454b5335d746dac995d9dc92",
+        "product_timestamp": null,
+        "product_age_minutes": null,
+        "coverage": "Kp, S1+ и R3+ на три суток"
+      },
+      {
+        "source_id": "celestrak-iss",
+        "name": "CelesTrak ISS OMM",
+        "status": "fresh",
+        "last_success": "2026-09-19T14:48:33.160569Z",
+        "age_minutes": 26,
+        "is_synthetic": false,
+        "url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544&FORMAT=JSON",
+        "sha256": "dde40ce464b48bb0641959bc8a3e8bc2760d5623b0554d678c538d8e4ca42b5a",
+        "product_timestamp": "2026-09-18T18:11:54.904992Z",
+        "product_age_minutes": 1263,
+        "coverage": "ISS NORAD 25544"
+      },
+      {
+        "source_id": "celestrak-iss-tle",
+        "name": "CelesTrak ISS TLE",
+        "status": "fresh",
+        "last_success": "2026-09-19T14:48:37.708188Z",
+        "age_minutes": 26,
+        "is_synthetic": false,
+        "url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544&FORMAT=TLE",
+        "sha256": "06690b1e7f7d1faf999c61a05bae342d63e4fcb33308b28226d247a83efd94c6",
+        "product_timestamp": "2026-09-19T04:11:54.904992Z",
+        "product_age_minutes": 663,
+        "coverage": "ISS NORAD 25544"
+      }
+    ],
+    "trajectory": {
+      "source": "CelesTrak OMM + TLE/SGP4",
+      "norad_id": 25544,
+      "epoch": "2026-09-19T04:11:54.904992",
+      "propagator": "SGP4",
+      "coordinate_frame": "TEME",
+      "time_scale": "UTC",
+      "gravity_model": "WGS-72",
+      "points": 85,
+      "shadow_intervals": [
+        {
+          "start": "2026-09-19T16:00:00+00:00",
+          "end": "2026-09-19T16:10:00+00:00"
+        },
+        {
+          "start": "2026-09-19T17:10:00+00:00",
+          "end": "2026-09-19T17:40:00+00:00"
+        },
+        {
+          "start": "2026-09-19T18:40:00+00:00",
+          "end": "2026-09-19T19:20:00+00:00"
+        },
+        {
+          "start": "2026-09-19T20:10:00+00:00",
+          "end": "2026-09-19T20:50:00+00:00"
+        },
+        {
+          "start": "2026-09-19T21:50:00+00:00",
+          "end": "2026-09-19T22:20:00+00:00"
+        },
+        {
+          "start": "2026-09-19T23:20:00+00:00",
+          "end": "2026-09-19T23:50:00+00:00"
+        },
+        {
+          "start": "2026-09-20T00:50:00+00:00",
+          "end": "2026-09-20T01:30:00+00:00"
+        },
+        {
+          "start": "2026-09-20T02:20:00+00:00",
+          "end": "2026-09-20T03:00:00+00:00"
+        },
+        {
+          "start": "2026-09-20T04:00:00+00:00",
+          "end": "2026-09-20T04:30:00+00:00"
+        },
+        {
+          "start": "2026-09-20T05:30:00+00:00",
+          "end": "2026-09-20T06:00:00+00:00"
+        }
+      ],
+      "min_altitude_km": 410.4,
+      "max_altitude_km": 426.0,
+      "valid_points": 85
+    },
+    "historical_cutoff": null,
+    "evaluation_mode": "current_monitoring",
+    "verification": null,
+    "operational_status": "HOLD_POLICY",
+    "operator_action": "Ожидают заполнения: Дозиметрия и порог политики актуальны (не старше 30 мин). Оценка окон уже выполнена и показана ниже; статус обновится после ввода.",
+    "risk_domains": [
+      {
+        "id": "radiation",
+        "name": "Радиационная обстановка",
+        "basis": "NOAA S-scale, прогноз S1+ и введённая дозиметрия",
+        "status": "monitor",
+        "limitation": "Открытые данные не являются индивидуальной дозой; решение использует отдельно введённую телеметрию."
+      },
+      {
+        "id": "communications",
+        "name": "Связь и навигация",
+        "basis": "NOAA G/R",
+        "status": "monitor",
+        "limitation": "Не является прогнозом отказа конкретного канала."
+      },
+      {
+        "id": "lighting",
+        "name": "Освещённость",
+        "basis": "SGP4 и модель тени",
+        "status": "monitor",
+        "limitation": "Не включает полутень, локальную геометрию и тепловой режим."
+      },
+      {
+        "id": "data",
+        "name": "Полнота данных",
+        "basis": "Актуальность и provenance",
+        "status": "verified",
+        "limitation": "Публичные источники не заменяют сертифицированные контуры управления."
+      }
+    ],
+    "decision_gates": [
+      {
+        "id": "sources",
+        "label": "Критичные источники доступны",
+        "passed": true,
+        "blocking": true
+      },
+      {
+        "id": "policy",
+        "label": "Применена политика demo-policy-2026-09",
+        "passed": true,
+        "blocking": true
+      },
+      {
+        "id": "dosimetry",
+        "label": "Дозиметрия и порог политики актуальны (не старше 30 мин)",
+        "passed": false,
+        "blocking": true
+      },
+      {
+        "id": "operation",
+        "label": "Профиль операции: standard_eva",
+        "passed": true,
+        "blocking": true
+      }
+    ],
+    "decision_confidence": "gates_open",
+    "result_id": "04a8ccf64e201043"
+  }
+}

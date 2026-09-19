@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: pulse-orbit
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: EVA_LIVE_DATA
+        value: "1"
+      - key: EVA_CACHE_TTL_HOURS
+        value: "2"

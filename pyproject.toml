@@ -1,0 +1,23 @@
+[project]
+name = "pulse-orbit"
+version = "0.1.0"
+description = "Research prototype for comparing ISS EVA windows"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115,<1",
+  "uvicorn[standard]>=0.34,<1",
+  "pydantic>=2.10,<3",
+  "httpx>=0.28,<1",
+  "sgp4>=2.24,<3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9"]
+archive = ["sscws>=2.5,<3"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.setuptools]
+packages = ["app", "app.services"]

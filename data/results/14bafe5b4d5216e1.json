@@ -1,0 +1,1082 @@
+{
+  "result_id": "14bafe5b4d5216e1",
+  "saved_at": "2026-09-19T15:13:55.308749+00:00",
+  "content_sha256": "14bafe5b4d5216e15ebd3131ad265fcb3d22342cac53ec09fba5e67ab2cf25d0",
+  "result": {
+    "request": {
+      "mode": "historical",
+      "start": "2024-05-11T10:00:00Z",
+      "duration_hours": 4.0,
+      "search_hours": 6.0,
+      "step_minutes": 30,
+      "cutoff": null,
+      "disabled_sources": [],
+      "continuous_lighting_required": false,
+      "force_refresh": false,
+      "operation_profile": "standard_eva",
+      "policy_version": "demo-policy-2026-09",
+      "crew_dose_rate_usv_h": null,
+      "crew_dose_limit_usv_h": null,
+      "dosimetry_timestamp": null
+    },
+    "generated_at": "2026-09-19T15:13:55.304701Z",
+    "algorithm_version": "1.0.1-nasa-historical-geometry",
+    "data_notice": "HISTORICAL ANALYSIS: использованы итоговые события NOAA NCEI и доступная историческая реконструкция орбиты. Подключённые источники обработаны. Это исследовательский прототип, а не допуск к ВКД.",
+    "recommendation": "Несколько окон равноценны по доступным данным",
+    "rationale": [
+      "Минимальную оценку 0 получили 13 окон.",
+      "Для окончательного выбора нужны реальные оперативные данные и ограничения конкретных работ."
+    ],
+    "windows": [
+      {
+        "start": "2024-05-11T10:00:00Z",
+        "end": "2024-05-11T14:00:00Z",
+        "severity": "not_detected",
+        "completeness": "подключённые источники обработаны",
+        "score": 0,
+        "factors": [
+          {
+            "factor_id": "space-weather-xra",
+            "name": "Рентгеновские вспышки XRA",
+            "mechanism": "Космическая погода: XRA",
+            "severity": "not_detected",
+            "overlap_minutes": 0,
+            "confidence": "низкая",
+            "confidence_basis": "Оперативное или архивное сообщение NOAA с идентификатором записи.",
+            "applied_rule": "XRA используется только как ретроспективный индикатор вспышки.",
+            "decision_relevant": true,
+            "summary": "Событие XRA не выявлено в пределах подключённого продукта.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "observation",
+                "title": "Проверка NOAA XRA",
+                "value": "событие не найдено",
+                "unit": null,
+                "observed_at": null,
+                "published_at": null,
+                "source_name": "NOAA NCEI event report",
+                "source_url": "https://www.swpc.noaa.gov/products/alerts-watches-and-warnings",
+                "record_id": "coverage-xra-f8e7467ae83d",
+                "record_sha256": null,
+                "note": "Проверен доступный продукт; искусственное время события не создаётся."
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "info",
+            "overlap_minutes": 20,
+            "confidence": "средняя",
+            "confidence_basis": "SGP4 по датированному TLE с шагом 10 минут; модель не учитывает полутень и геометрию рабочего места.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 20 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "20",
+                "unit": "мин пересечения",
+                "observed_at": "2024-05-11T10:00:00Z",
+                "published_at": null,
+                "source_name": "SGP4 + analytical Sun model",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-52ddd56163e8",
+                "record_sha256": null,
+                "note": "Расчёт команды по орбитальной траектории и направлению на Солнце."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "start": "2024-05-11T10:30:00Z",
+        "end": "2024-05-11T14:30:00Z",
+        "severity": "not_detected",
+        "completeness": "подключённые источники обработаны",
+        "score": 0,
+        "factors": [
+          {
+            "factor_id": "space-weather-xra",
+            "name": "Рентгеновские вспышки XRA",
+            "mechanism": "Космическая погода: XRA",
+            "severity": "not_detected",
+            "overlap_minutes": 0,
+            "confidence": "низкая",
+            "confidence_basis": "Оперативное или архивное сообщение NOAA с идентификатором записи.",
+            "applied_rule": "XRA используется только как ретроспективный индикатор вспышки.",
+            "decision_relevant": true,
+            "summary": "Событие XRA не выявлено в пределах подключённого продукта.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "observation",
+                "title": "Проверка NOAA XRA",
+                "value": "событие не найдено",
+                "unit": null,
+                "observed_at": null,
+                "published_at": null,
+                "source_name": "NOAA NCEI event report",
+                "source_url": "https://www.swpc.noaa.gov/products/alerts-watches-and-warnings",
+                "record_id": "coverage-xra-f8e7467ae83d",
+                "record_sha256": null,
+                "note": "Проверен доступный продукт; искусственное время события не создаётся."
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "info",
+            "overlap_minutes": 10,
+            "confidence": "средняя",
+            "confidence_basis": "SGP4 по датированному TLE с шагом 10 минут; модель не учитывает полутень и геометрию рабочего места.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 10 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "10",
+                "unit": "мин пересечения",
+                "observed_at": "2024-05-11T10:30:00Z",
+                "published_at": null,
+                "source_name": "SGP4 + analytical Sun model",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-52ddd56163e8",
+                "record_sha256": null,
+                "note": "Расчёт команды по орбитальной траектории и направлению на Солнце."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "start": "2024-05-11T11:00:00Z",
+        "end": "2024-05-11T15:00:00Z",
+        "severity": "not_detected",
+        "completeness": "подключённые источники обработаны",
+        "score": 0,
+        "factors": [
+          {
+            "factor_id": "space-weather-xra",
+            "name": "Рентгеновские вспышки XRA",
+            "mechanism": "Космическая погода: XRA",
+            "severity": "not_detected",
+            "overlap_minutes": 0,
+            "confidence": "низкая",
+            "confidence_basis": "Оперативное или архивное сообщение NOAA с идентификатором записи.",
+            "applied_rule": "XRA используется только как ретроспективный индикатор вспышки.",
+            "decision_relevant": true,
+            "summary": "Событие XRA не выявлено в пределах подключённого продукта.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "observation",
+                "title": "Проверка NOAA XRA",
+                "value": "событие не найдено",
+                "unit": null,
+                "observed_at": null,
+                "published_at": null,
+                "source_name": "NOAA NCEI event report",
+                "source_url": "https://www.swpc.noaa.gov/products/alerts-watches-and-warnings",
+                "record_id": "coverage-xra-f8e7467ae83d",
+                "record_sha256": null,
+                "note": "Проверен доступный продукт; искусственное время события не создаётся."
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "info",
+            "overlap_minutes": 20,
+            "confidence": "средняя",
+            "confidence_basis": "SGP4 по датированному TLE с шагом 10 минут; модель не учитывает полутень и геометрию рабочего места.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 20 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "20",
+                "unit": "мин пересечения",
+                "observed_at": "2024-05-11T11:00:00Z",
+                "published_at": null,
+                "source_name": "SGP4 + analytical Sun model",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-52ddd56163e8",
+                "record_sha256": null,
+                "note": "Расчёт команды по орбитальной траектории и направлению на Солнце."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "start": "2024-05-11T11:30:00Z",
+        "end": "2024-05-11T15:30:00Z",
+        "severity": "not_detected",
+        "completeness": "подключённые источники обработаны",
+        "score": 0,
+        "factors": [
+          {
+            "factor_id": "space-weather-xra",
+            "name": "Рентгеновские вспышки XRA",
+            "mechanism": "Космическая погода: XRA",
+            "severity": "not_detected",
+            "overlap_minutes": 0,
+            "confidence": "низкая",
+            "confidence_basis": "Оперативное или архивное сообщение NOAA с идентификатором записи.",
+            "applied_rule": "XRA используется только как ретроспективный индикатор вспышки.",
+            "decision_relevant": true,
+            "summary": "Событие XRA не выявлено в пределах подключённого продукта.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "observation",
+                "title": "Проверка NOAA XRA",
+                "value": "событие не найдено",
+                "unit": null,
+                "observed_at": null,
+                "published_at": null,
+                "source_name": "NOAA NCEI event report",
+                "source_url": "https://www.swpc.noaa.gov/products/alerts-watches-and-warnings",
+                "record_id": "coverage-xra-f8e7467ae83d",
+                "record_sha256": null,
+                "note": "Проверен доступный продукт; искусственное время события не создаётся."
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "info",
+            "overlap_minutes": 20,
+            "confidence": "средняя",
+            "confidence_basis": "SGP4 по датированному TLE с шагом 10 минут; модель не учитывает полутень и геометрию рабочего места.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 20 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "20",
+                "unit": "мин пересечения",
+                "observed_at": "2024-05-11T11:30:00Z",
+                "published_at": null,
+                "source_name": "SGP4 + analytical Sun model",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-52ddd56163e8",
+                "record_sha256": null,
+                "note": "Расчёт команды по орбитальной траектории и направлению на Солнце."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "start": "2024-05-11T12:00:00Z",
+        "end": "2024-05-11T16:00:00Z",
+        "severity": "not_detected",
+        "completeness": "подключённые источники обработаны",
+        "score": 0,
+        "factors": [
+          {
+            "factor_id": "space-weather-xra",
+            "name": "Рентгеновские вспышки XRA",
+            "mechanism": "Космическая погода: XRA",
+            "severity": "not_detected",
+            "overlap_minutes": 0,
+            "confidence": "низкая",
+            "confidence_basis": "Оперативное или архивное сообщение NOAA с идентификатором записи.",
+            "applied_rule": "XRA используется только как ретроспективный индикатор вспышки.",
+            "decision_relevant": true,
+            "summary": "Событие XRA не выявлено в пределах подключённого продукта.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "observation",
+                "title": "Проверка NOAA XRA",
+                "value": "событие не найдено",
+                "unit": null,
+                "observed_at": null,
+                "published_at": null,
+                "source_name": "NOAA NCEI event report",
+                "source_url": "https://www.swpc.noaa.gov/products/alerts-watches-and-warnings",
+                "record_id": "coverage-xra-f8e7467ae83d",
+                "record_sha256": null,
+                "note": "Проверен доступный продукт; искусственное время события не создаётся."
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "info",
+            "overlap_minutes": 10,
+            "confidence": "средняя",
+            "confidence_basis": "SGP4 по датированному TLE с шагом 10 минут; модель не учитывает полутень и геометрию рабочего места.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 10 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "10",
+                "unit": "мин пересечения",
+                "observed_at": "2024-05-11T12:00:00Z",
+                "published_at": null,
+                "source_name": "SGP4 + analytical Sun model",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-52ddd56163e8",
+                "record_sha256": null,
+                "note": "Расчёт команды по орбитальной траектории и направлению на Солнце."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "start": "2024-05-11T12:30:00Z",
+        "end": "2024-05-11T16:30:00Z",
+        "severity": "not_detected",
+        "completeness": "подключённые источники обработаны",
+        "score": 0,
+        "factors": [
+          {
+            "factor_id": "space-weather-xra",
+            "name": "Рентгеновские вспышки XRA",
+            "mechanism": "Космическая погода: XRA",
+            "severity": "not_detected",
+            "overlap_minutes": 0,
+            "confidence": "низкая",
+            "confidence_basis": "Оперативное или архивное сообщение NOAA с идентификатором записи.",
+            "applied_rule": "XRA используется только как ретроспективный индикатор вспышки.",
+            "decision_relevant": true,
+            "summary": "Событие XRA не выявлено в пределах подключённого продукта.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "observation",
+                "title": "Проверка NOAA XRA",
+                "value": "событие не найдено",
+                "unit": null,
+                "observed_at": null,
+                "published_at": null,
+                "source_name": "NOAA NCEI event report",
+                "source_url": "https://www.swpc.noaa.gov/products/alerts-watches-and-warnings",
+                "record_id": "coverage-xra-f8e7467ae83d",
+                "record_sha256": null,
+                "note": "Проверен доступный продукт; искусственное время события не создаётся."
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "info",
+            "overlap_minutes": 20,
+            "confidence": "средняя",
+            "confidence_basis": "SGP4 по датированному TLE с шагом 10 минут; модель не учитывает полутень и геометрию рабочего места.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 20 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "20",
+                "unit": "мин пересечения",
+                "observed_at": "2024-05-11T12:30:00Z",
+                "published_at": null,
+                "source_name": "SGP4 + analytical Sun model",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-52ddd56163e8",
+                "record_sha256": null,
+                "note": "Расчёт команды по орбитальной траектории и направлению на Солнце."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "start": "2024-05-11T13:00:00Z",
+        "end": "2024-05-11T17:00:00Z",
+        "severity": "not_detected",
+        "completeness": "подключённые источники обработаны",
+        "score": 0,
+        "factors": [
+          {
+            "factor_id": "space-weather-xra",
+            "name": "Рентгеновские вспышки XRA",
+            "mechanism": "Космическая погода: XRA",
+            "severity": "not_detected",
+            "overlap_minutes": 0,
+            "confidence": "низкая",
+            "confidence_basis": "Оперативное или архивное сообщение NOAA с идентификатором записи.",
+            "applied_rule": "XRA используется только как ретроспективный индикатор вспышки.",
+            "decision_relevant": true,
+            "summary": "Событие XRA не выявлено в пределах подключённого продукта.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "observation",
+                "title": "Проверка NOAA XRA",
+                "value": "событие не найдено",
+                "unit": null,
+                "observed_at": null,
+                "published_at": null,
+                "source_name": "NOAA NCEI event report",
+                "source_url": "https://www.swpc.noaa.gov/products/alerts-watches-and-warnings",
+                "record_id": "coverage-xra-f8e7467ae83d",
+                "record_sha256": null,
+                "note": "Проверен доступный продукт; искусственное время события не создаётся."
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "info",
+            "overlap_minutes": 20,
+            "confidence": "средняя",
+            "confidence_basis": "SGP4 по датированному TLE с шагом 10 минут; модель не учитывает полутень и геометрию рабочего места.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 20 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "20",
+                "unit": "мин пересечения",
+                "observed_at": "2024-05-11T13:00:00Z",
+                "published_at": null,
+                "source_name": "SGP4 + analytical Sun model",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-52ddd56163e8",
+                "record_sha256": null,
+                "note": "Расчёт команды по орбитальной траектории и направлению на Солнце."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "start": "2024-05-11T13:30:00Z",
+        "end": "2024-05-11T17:30:00Z",
+        "severity": "not_detected",
+        "completeness": "подключённые источники обработаны",
+        "score": 0,
+        "factors": [
+          {
+            "factor_id": "space-weather-xra",
+            "name": "Рентгеновские вспышки XRA",
+            "mechanism": "Космическая погода: XRA",
+            "severity": "not_detected",
+            "overlap_minutes": 0,
+            "confidence": "низкая",
+            "confidence_basis": "Оперативное или архивное сообщение NOAA с идентификатором записи.",
+            "applied_rule": "XRA используется только как ретроспективный индикатор вспышки.",
+            "decision_relevant": true,
+            "summary": "Событие XRA не выявлено в пределах подключённого продукта.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "observation",
+                "title": "Проверка NOAA XRA",
+                "value": "событие не найдено",
+                "unit": null,
+                "observed_at": null,
+                "published_at": null,
+                "source_name": "NOAA NCEI event report",
+                "source_url": "https://www.swpc.noaa.gov/products/alerts-watches-and-warnings",
+                "record_id": "coverage-xra-f8e7467ae83d",
+                "record_sha256": null,
+                "note": "Проверен доступный продукт; искусственное время события не создаётся."
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "info",
+            "overlap_minutes": 20,
+            "confidence": "средняя",
+            "confidence_basis": "SGP4 по датированному TLE с шагом 10 минут; модель не учитывает полутень и геометрию рабочего места.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 20 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "20",
+                "unit": "мин пересечения",
+                "observed_at": "2024-05-11T13:30:00Z",
+                "published_at": null,
+                "source_name": "SGP4 + analytical Sun model",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-52ddd56163e8",
+                "record_sha256": null,
+                "note": "Расчёт команды по орбитальной траектории и направлению на Солнце."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "start": "2024-05-11T14:00:00Z",
+        "end": "2024-05-11T18:00:00Z",
+        "severity": "not_detected",
+        "completeness": "подключённые источники обработаны",
+        "score": 0,
+        "factors": [
+          {
+            "factor_id": "space-weather-xra",
+            "name": "Рентгеновские вспышки XRA",
+            "mechanism": "Космическая погода: XRA",
+            "severity": "not_detected",
+            "overlap_minutes": 0,
+            "confidence": "низкая",
+            "confidence_basis": "Оперативное или архивное сообщение NOAA с идентификатором записи.",
+            "applied_rule": "XRA используется только как ретроспективный индикатор вспышки.",
+            "decision_relevant": true,
+            "summary": "Событие XRA не выявлено в пределах подключённого продукта.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "observation",
+                "title": "Проверка NOAA XRA",
+                "value": "событие не найдено",
+                "unit": null,
+                "observed_at": null,
+                "published_at": null,
+                "source_name": "NOAA NCEI event report",
+                "source_url": "https://www.swpc.noaa.gov/products/alerts-watches-and-warnings",
+                "record_id": "coverage-xra-f8e7467ae83d",
+                "record_sha256": null,
+                "note": "Проверен доступный продукт; искусственное время события не создаётся."
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "info",
+            "overlap_minutes": 30,
+            "confidence": "средняя",
+            "confidence_basis": "SGP4 по датированному TLE с шагом 10 минут; модель не учитывает полутень и геометрию рабочего места.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 30 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "30",
+                "unit": "мин пересечения",
+                "observed_at": "2024-05-11T14:00:00Z",
+                "published_at": null,
+                "source_name": "SGP4 + analytical Sun model",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-52ddd56163e8",
+                "record_sha256": null,
+                "note": "Расчёт команды по орбитальной траектории и направлению на Солнце."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "start": "2024-05-11T14:30:00Z",
+        "end": "2024-05-11T18:30:00Z",
+        "severity": "not_detected",
+        "completeness": "подключённые источники обработаны",
+        "score": 0,
+        "factors": [
+          {
+            "factor_id": "space-weather-xra",
+            "name": "Рентгеновские вспышки XRA",
+            "mechanism": "Космическая погода: XRA",
+            "severity": "not_detected",
+            "overlap_minutes": 0,
+            "confidence": "низкая",
+            "confidence_basis": "Оперативное или архивное сообщение NOAA с идентификатором записи.",
+            "applied_rule": "XRA используется только как ретроспективный индикатор вспышки.",
+            "decision_relevant": true,
+            "summary": "Событие XRA не выявлено в пределах подключённого продукта.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "observation",
+                "title": "Проверка NOAA XRA",
+                "value": "событие не найдено",
+                "unit": null,
+                "observed_at": null,
+                "published_at": null,
+                "source_name": "NOAA NCEI event report",
+                "source_url": "https://www.swpc.noaa.gov/products/alerts-watches-and-warnings",
+                "record_id": "coverage-xra-f8e7467ae83d",
+                "record_sha256": null,
+                "note": "Проверен доступный продукт; искусственное время события не создаётся."
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "info",
+            "overlap_minutes": 30,
+            "confidence": "средняя",
+            "confidence_basis": "SGP4 по датированному TLE с шагом 10 минут; модель не учитывает полутень и геометрию рабочего места.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 30 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "30",
+                "unit": "мин пересечения",
+                "observed_at": "2024-05-11T14:30:00Z",
+                "published_at": null,
+                "source_name": "SGP4 + analytical Sun model",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-52ddd56163e8",
+                "record_sha256": null,
+                "note": "Расчёт команды по орбитальной траектории и направлению на Солнце."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "start": "2024-05-11T15:00:00Z",
+        "end": "2024-05-11T19:00:00Z",
+        "severity": "not_detected",
+        "completeness": "подключённые источники обработаны",
+        "score": 0,
+        "factors": [
+          {
+            "factor_id": "space-weather-xra",
+            "name": "Рентгеновские вспышки XRA",
+            "mechanism": "Космическая погода: XRA",
+            "severity": "not_detected",
+            "overlap_minutes": 0,
+            "confidence": "низкая",
+            "confidence_basis": "Оперативное или архивное сообщение NOAA с идентификатором записи.",
+            "applied_rule": "XRA используется только как ретроспективный индикатор вспышки.",
+            "decision_relevant": true,
+            "summary": "Событие XRA не выявлено в пределах подключённого продукта.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "observation",
+                "title": "Проверка NOAA XRA",
+                "value": "событие не найдено",
+                "unit": null,
+                "observed_at": null,
+                "published_at": null,
+                "source_name": "NOAA NCEI event report",
+                "source_url": "https://www.swpc.noaa.gov/products/alerts-watches-and-warnings",
+                "record_id": "coverage-xra-f8e7467ae83d",
+                "record_sha256": null,
+                "note": "Проверен доступный продукт; искусственное время события не создаётся."
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "info",
+            "overlap_minutes": 20,
+            "confidence": "средняя",
+            "confidence_basis": "SGP4 по датированному TLE с шагом 10 минут; модель не учитывает полутень и геометрию рабочего места.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 20 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "20",
+                "unit": "мин пересечения",
+                "observed_at": "2024-05-11T15:00:00Z",
+                "published_at": null,
+                "source_name": "SGP4 + analytical Sun model",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-52ddd56163e8",
+                "record_sha256": null,
+                "note": "Расчёт команды по орбитальной траектории и направлению на Солнце."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "start": "2024-05-11T15:30:00Z",
+        "end": "2024-05-11T19:30:00Z",
+        "severity": "not_detected",
+        "completeness": "подключённые источники обработаны",
+        "score": 0,
+        "factors": [
+          {
+            "factor_id": "space-weather-xra",
+            "name": "Рентгеновские вспышки XRA",
+            "mechanism": "Космическая погода: XRA",
+            "severity": "not_detected",
+            "overlap_minutes": 0,
+            "confidence": "низкая",
+            "confidence_basis": "Оперативное или архивное сообщение NOAA с идентификатором записи.",
+            "applied_rule": "XRA используется только как ретроспективный индикатор вспышки.",
+            "decision_relevant": true,
+            "summary": "Событие XRA не выявлено в пределах подключённого продукта.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "observation",
+                "title": "Проверка NOAA XRA",
+                "value": "событие не найдено",
+                "unit": null,
+                "observed_at": null,
+                "published_at": null,
+                "source_name": "NOAA NCEI event report",
+                "source_url": "https://www.swpc.noaa.gov/products/alerts-watches-and-warnings",
+                "record_id": "coverage-xra-f8e7467ae83d",
+                "record_sha256": null,
+                "note": "Проверен доступный продукт; искусственное время события не создаётся."
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "info",
+            "overlap_minutes": 20,
+            "confidence": "средняя",
+            "confidence_basis": "SGP4 по датированному TLE с шагом 10 минут; модель не учитывает полутень и геометрию рабочего места.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 20 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "20",
+                "unit": "мин пересечения",
+                "observed_at": "2024-05-11T15:30:00Z",
+                "published_at": null,
+                "source_name": "SGP4 + analytical Sun model",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-52ddd56163e8",
+                "record_sha256": null,
+                "note": "Расчёт команды по орбитальной траектории и направлению на Солнце."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "start": "2024-05-11T16:00:00Z",
+        "end": "2024-05-11T20:00:00Z",
+        "severity": "not_detected",
+        "completeness": "подключённые источники обработаны",
+        "score": 0,
+        "factors": [
+          {
+            "factor_id": "space-weather-xra",
+            "name": "Рентгеновские вспышки XRA",
+            "mechanism": "Космическая погода: XRA",
+            "severity": "not_detected",
+            "overlap_minutes": 0,
+            "confidence": "низкая",
+            "confidence_basis": "Оперативное или архивное сообщение NOAA с идентификатором записи.",
+            "applied_rule": "XRA используется только как ретроспективный индикатор вспышки.",
+            "decision_relevant": true,
+            "summary": "Событие XRA не выявлено в пределах подключённого продукта.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "observation",
+                "title": "Проверка NOAA XRA",
+                "value": "событие не найдено",
+                "unit": null,
+                "observed_at": null,
+                "published_at": null,
+                "source_name": "NOAA NCEI event report",
+                "source_url": "https://www.swpc.noaa.gov/products/alerts-watches-and-warnings",
+                "record_id": "coverage-xra-f8e7467ae83d",
+                "record_sha256": null,
+                "note": "Проверен доступный продукт; искусственное время события не создаётся."
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "info",
+            "overlap_minutes": 20,
+            "confidence": "средняя",
+            "confidence_basis": "SGP4 по датированному TLE с шагом 10 минут; модель не учитывает полутень и геометрию рабочего места.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 20 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "20",
+                "unit": "мин пересечения",
+                "observed_at": "2024-05-11T16:00:00Z",
+                "published_at": null,
+                "source_name": "SGP4 + analytical Sun model",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-52ddd56163e8",
+                "record_sha256": null,
+                "note": "Расчёт команды по орбитальной траектории и направлению на Солнце."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "source_status": [
+      {
+        "source_id": "noaa-events-20240511",
+        "name": "NOAA NCEI daily event archive",
+        "status": "fresh",
+        "last_success": "2026-09-19T15:13:52.340263Z",
+        "age_minutes": 0,
+        "is_synthetic": false,
+        "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/solar_event_reports/2024/05/20240511events.txt",
+        "sha256": "afb11d54948f3573e9b0cd2c015aba99e483c35c711f140aa671d73e6a190fdc",
+        "product_timestamp": null,
+        "product_age_minutes": null,
+        "coverage": "unknown"
+      },
+      {
+        "source_id": "historical-orbit",
+        "name": "NASA SSCWeb historical ISS coordinates",
+        "status": "archive",
+        "last_success": "2024-05-11T10:00:00Z",
+        "age_minutes": 0,
+        "is_synthetic": false,
+        "url": "https://sscweb.gsfc.nasa.gov/",
+        "sha256": null,
+        "product_timestamp": "2024-05-11T10:00:00Z",
+        "product_age_minutes": 0,
+        "coverage": "ISS, GSE, шаг 10 минут"
+      }
+    ],
+    "trajectory": {
+      "source": "NASA GSFC SSCWeb historical ISS coordinates",
+      "norad_id": 25544,
+      "epoch": null,
+      "propagator": "SGP4",
+      "coordinate_frame": "GSE",
+      "time_scale": "UTC",
+      "gravity_model": "WGS-72",
+      "points": 61,
+      "shadow_intervals": [
+        {
+          "start": "2024-05-11T10:10:00+00:00",
+          "end": "2024-05-11T10:20:00+00:00"
+        },
+        {
+          "start": "2024-05-11T11:40:00+00:00",
+          "end": "2024-05-11T11:50:00+00:00"
+        },
+        {
+          "start": "2024-05-11T14:50:00+00:00",
+          "end": "2024-05-11T15:00:00+00:00"
+        },
+        {
+          "start": "2024-05-11T16:20:00+00:00",
+          "end": "2024-05-11T16:30:00+00:00"
+        },
+        {
+          "start": "2024-05-11T17:50:00+00:00",
+          "end": "2024-05-11T18:00:00+00:00"
+        }
+      ],
+      "min_altitude_km": 405.2,
+      "max_altitude_km": 419.7,
+      "valid_points": 61
+    },
+    "historical_cutoff": null,
+    "evaluation_mode": "historical_analysis",
+    "verification": null,
+    "operational_status": "HOLD_POLICY",
+    "operator_action": "Ожидают заполнения: Дозиметрия и порог политики актуальны (не старше 30 мин). Оценка окон уже выполнена и показана ниже; статус обновится после ввода.",
+    "risk_domains": [
+      {
+        "id": "radiation",
+        "name": "Радиационная обстановка",
+        "basis": "NOAA S-scale, прогноз S1+ и введённая дозиметрия",
+        "status": "monitor",
+        "limitation": "Открытые данные не являются индивидуальной дозой; решение использует отдельно введённую телеметрию."
+      },
+      {
+        "id": "communications",
+        "name": "Связь и навигация",
+        "basis": "NOAA G/R",
+        "status": "monitor",
+        "limitation": "Не является прогнозом отказа конкретного канала."
+      },
+      {
+        "id": "lighting",
+        "name": "Освещённость",
+        "basis": "SGP4 и модель тени",
+        "status": "monitor",
+        "limitation": "Не включает полутень, локальную геометрию и тепловой режим."
+      },
+      {
+        "id": "data",
+        "name": "Полнота данных",
+        "basis": "Актуальность и provenance",
+        "status": "verified",
+        "limitation": "Публичные источники не заменяют сертифицированные контуры управления."
+      }
+    ],
+    "decision_gates": [
+      {
+        "id": "sources",
+        "label": "Критичные источники доступны",
+        "passed": true,
+        "blocking": true
+      },
+      {
+        "id": "policy",
+        "label": "Применена политика demo-policy-2026-09",
+        "passed": true,
+        "blocking": true
+      },
+      {
+        "id": "dosimetry",
+        "label": "Дозиметрия и порог политики актуальны (не старше 30 мин)",
+        "passed": false,
+        "blocking": true
+      },
+      {
+        "id": "operation",
+        "label": "Профиль операции: standard_eva",
+        "passed": true,
+        "blocking": true
+      }
+    ],
+    "decision_confidence": "gates_open",
+    "result_id": "14bafe5b4d5216e1"
+  }
+}

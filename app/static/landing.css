@@ -1,0 +1,215 @@
+/* Пульс Орбиты — лендинг. Палитра: чёрный (звёздное небо), белый, розовый. Градиенты не используются. */
+
+:root {
+  --ink: #0B0B14;
+  --ink-soft: #15151F;
+  --white: #FFFFFF;
+  --pink: #F2789F;
+  --pink-deep: #DE6389;
+  --pink-soft: #FDEEF3;
+  --grey: #6B6B7B;
+  --line: #E6E6EE;
+  --sky-radius: 56px;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body.landing {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--white);
+  color: var(--ink);
+  overflow-x: hidden;
+}
+
+/* ---------- сцена ---------- */
+.lp-stage {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+}
+
+/* звёздное небо — сильно скруглённый чёрный блок на белом фоне */
+.lp-sky {
+  position: relative;
+  border-radius: var(--sky-radius);
+  background-color: var(--ink);
+  background-image: url("/static/img/sky.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  min-height: calc(100vh - 40px);
+  height: calc(100vh - 40px);
+  display: grid;
+  place-items: center;
+  padding: 110px 32px;
+}
+.lp-stars { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+
+.lp-hero { position: relative; z-index: 5; text-align: center; max-width: 700px; }
+.lp-eyebrow {
+  margin: 0 0 22px;
+  font-size: 13px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--pink);
+  font-weight: 700;
+}
+.lp-title {
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(32px, 4.6vw, 58px);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -.02em;
+}
+.lp-title em { font-style: normal; color: var(--pink); }
+.lp-lead {
+  margin: 26px auto 0;
+  max-width: 620px;
+  color: rgba(255, 255, 255, .72);
+  font-size: 17px;
+  line-height: 1.6;
+}
+.lp-cta {
+  display: inline-block;
+  margin-top: 34px;
+  padding: 16px 36px;
+  border-radius: 999px;
+  background: var(--pink);
+  color: var(--white);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  transition: background .18s ease, transform .18s ease;
+}
+.lp-cta:hover { background: var(--pink-deep); transform: translateY(-2px); }
+.lp-note { margin: 18px 0 0; font-size: 13px; color: rgba(255, 255, 255, .45); }
+
+/* ---------- плавающие вырезки ---------- */
+.lp-float {
+  position: absolute;
+  z-index: 2;
+  animation: lp-drift 6s ease-in-out infinite;
+  pointer-events: none;
+}
+.lp-float img,
+.lp-float svg { display: block; width: 100%; height: auto; }
+
+/* картинка-вырезка (PNG с прозрачным фоном) */
+.lp-cutout img {
+  filter: drop-shadow(0 20px 38px rgba(11, 11, 20, .45));
+}
+.lp-f1 img { transform: rotate(-30deg); }
+
+.lp-f1 { top: -60px; left: -150px; width: 620px; animation-duration: 7s; animation-delay: -1.2s; }
+.lp-f4 { bottom: -80px; right: -125px; width: 430px; animation-duration: 7.5s; animation-delay: -4.4s; }
+
+@keyframes lp-drift {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-22px); }
+}
+
+/* ---------- рисованные звёзды ---------- */
+.lp-star-layer { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
+
+.lp-star { position: absolute; display: block; }
+.lp-star svg {
+  display: block; width: 100%; height: 100%;
+  /* Контур рисуется цветом самого элемента, заливки нет — вид рисунка от руки. */
+  fill: none;
+  stroke: currentColor;
+  stroke-width: inherit;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.lp-star--drift {
+  opacity: .55;
+  animation-name: lp-star-drift;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.lp-star--twinkle {
+  animation-name: lp-star-twinkle;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes lp-star-drift {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50%      { transform: translate(var(--dx), var(--dy)) rotate(var(--rot)); }
+}
+@keyframes lp-star-twinkle {
+  0%, 100% { opacity: var(--dim); transform: scale(.82); }
+  50%      { opacity: 1; transform: scale(1.1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lp-float { animation: none; }
+  .lp-star { animation: none; opacity: .6; }
+}
+
+/* ---------- три тезиса под сценой ---------- */
+.lp-points {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 40px 90px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.lp-point {
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 28px;
+  background: var(--white);
+}
+.lp-point-num {
+  display: inline-grid;
+  place-items: center;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: var(--pink-soft);
+  color: var(--pink-deep);
+  font-weight: 800;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+.lp-point h3 { margin: 0 0 10px; font-size: 18px; font-weight: 700; }
+.lp-point p { margin: 0; color: var(--grey); font-size: 15px; line-height: 1.6; }
+
+@media (max-width: 900px) {
+  .lp-stage { padding: 14px; }
+  .lp-sky {
+    min-height: calc(100vh - 28px);
+    height: calc(100vh - 28px);
+    border-radius: 34px;
+    padding: 40px 20px;
+  }
+  .lp-title { font-size: clamp(27px, 7vw, 40px); }
+  .lp-eyebrow { font-size: 11px; letter-spacing: .14em; margin-bottom: 16px; }
+  .lp-cta { padding: 15px 28px; font-size: 15px; }
+
+  /* Сатурн уходит за верхний левый угол, космонавт — за нижний правый.
+     Оба мельче, чтобы не наезжать на заголовок. */
+  .lp-f1 { top: -40px; left: -110px; width: 300px; }
+  .lp-f4 { bottom: -50px; right: -90px; width: 230px; }
+  .lp-star { transform-origin: center; zoom: .64; }
+}
+
+@media (max-width: 560px) {
+  .lp-stage { padding: 12px; }
+  .lp-sky { min-height: calc(100vh - 24px); height: calc(100vh - 24px); border-radius: 28px; padding: 32px 18px; }
+  .lp-hero { max-width: 100%; }
+  .lp-title { font-size: clamp(24px, 8vw, 34px); }
+  .lp-cta { width: 100%; padding: 16px 20px; }
+
+  .lp-f1 { top: -26px; left: -80px; width: 220px; }
+  .lp-f4 { bottom: -34px; right: -64px; width: 170px; }
+  .lp-star { zoom: .5; }
+}

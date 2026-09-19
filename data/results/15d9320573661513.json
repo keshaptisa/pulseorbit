@@ -1,0 +1,1067 @@
+{
+  "result_id": "15d9320573661513",
+  "saved_at": "2026-09-19T15:16:27.012420+00:00",
+  "content_sha256": "15d9320573661513f432cc35145b59942a1c0a256c6493c426269c424b98c750",
+  "result": {
+    "request": {
+      "mode": "replay",
+      "start": "2024-05-11T10:00:00Z",
+      "duration_hours": 4.0,
+      "search_hours": 6.0,
+      "step_minutes": 30,
+      "cutoff": "2024-05-10T12:00:00Z",
+      "disabled_sources": [],
+      "continuous_lighting_required": false,
+      "force_refresh": false,
+      "operation_profile": "standard_eva",
+      "policy_version": "demo-policy-2026-09",
+      "crew_dose_rate_usv_h": null,
+      "crew_dose_limit_usv_h": null,
+      "dosimetry_timestamp": null
+    },
+    "generated_at": "2026-09-19T15:16:27.012420Z",
+    "algorithm_version": "1.0.1-nasa-historical-geometry",
+    "data_notice": "REPLAY: использован последний NOAA daypre с Issued <= cutoff; орбита допускается только из снимка CelesTrak, доступного до cutoff. Есть пробелы данных; они не считаются благоприятной обстановкой. Это исследовательский прототип, а не допуск к ВКД.",
+    "recommendation": "Несколько окон равноценны по доступным данным",
+    "rationale": [
+      "Минимальную оценку 300 получили 13 окон.",
+      "Для окончательного выбора нужны реальные оперативные данные и ограничения конкретных работ."
+    ],
+    "windows": [
+      {
+        "start": "2024-05-11T10:00:00Z",
+        "end": "2024-05-11T14:00:00Z",
+        "severity": "high",
+        "completeness": "частичное покрытие",
+        "score": 300,
+        "factors": [
+          {
+            "factor_id": "space-weather-proton",
+            "name": "Прогноз протонного события",
+            "mechanism": "Космическая погода: PROTON",
+            "severity": "high",
+            "overlap_minutes": 240,
+            "confidence": "средняя",
+            "confidence_basis": "Оперативное или архивное сообщение NOAA с идентификатором записи.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Окно пересекает интервал PROTON на 240 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA PROTON",
+                "value": "50%",
+                "unit": null,
+                "observed_at": "2024-05-11T00:00:00Z",
+                "published_at": "2024-05-09T22:12:00Z",
+                "source_name": "NOAA NCEI daypre",
+                "source_url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/",
+                "record_id": "20240509daypre",
+                "record_sha256": null,
+                "note": "NOAA daypre proton-event probability: 50%"
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "unknown",
+            "overlap_minutes": 0,
+            "confidence": "низкая",
+            "confidence_basis": "Подходящие орбитальные элементы отсутствуют.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 0 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "0",
+                "unit": "мин пересечения",
+                "observed_at": "2024-05-11T10:00:00Z",
+                "published_at": null,
+                "source_name": "Орбитальные данные недоступны",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-52ddd56163e8",
+                "record_sha256": null,
+                "note": "Расчёт не выполнен; нулевое пересечение не предполагается."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "start": "2024-05-11T10:30:00Z",
+        "end": "2024-05-11T14:30:00Z",
+        "severity": "high",
+        "completeness": "частичное покрытие",
+        "score": 300,
+        "factors": [
+          {
+            "factor_id": "space-weather-proton",
+            "name": "Прогноз протонного события",
+            "mechanism": "Космическая погода: PROTON",
+            "severity": "high",
+            "overlap_minutes": 240,
+            "confidence": "средняя",
+            "confidence_basis": "Оперативное или архивное сообщение NOAA с идентификатором записи.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Окно пересекает интервал PROTON на 240 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA PROTON",
+                "value": "50%",
+                "unit": null,
+                "observed_at": "2024-05-11T00:00:00Z",
+                "published_at": "2024-05-09T22:12:00Z",
+                "source_name": "NOAA NCEI daypre",
+                "source_url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/",
+                "record_id": "20240509daypre",
+                "record_sha256": null,
+                "note": "NOAA daypre proton-event probability: 50%"
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "unknown",
+            "overlap_minutes": 0,
+            "confidence": "низкая",
+            "confidence_basis": "Подходящие орбитальные элементы отсутствуют.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 0 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "0",
+                "unit": "мин пересечения",
+                "observed_at": "2024-05-11T10:30:00Z",
+                "published_at": null,
+                "source_name": "Орбитальные данные недоступны",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-52ddd56163e8",
+                "record_sha256": null,
+                "note": "Расчёт не выполнен; нулевое пересечение не предполагается."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "start": "2024-05-11T11:00:00Z",
+        "end": "2024-05-11T15:00:00Z",
+        "severity": "high",
+        "completeness": "частичное покрытие",
+        "score": 300,
+        "factors": [
+          {
+            "factor_id": "space-weather-proton",
+            "name": "Прогноз протонного события",
+            "mechanism": "Космическая погода: PROTON",
+            "severity": "high",
+            "overlap_minutes": 240,
+            "confidence": "средняя",
+            "confidence_basis": "Оперативное или архивное сообщение NOAA с идентификатором записи.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Окно пересекает интервал PROTON на 240 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA PROTON",
+                "value": "50%",
+                "unit": null,
+                "observed_at": "2024-05-11T00:00:00Z",
+                "published_at": "2024-05-09T22:12:00Z",
+                "source_name": "NOAA NCEI daypre",
+                "source_url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/",
+                "record_id": "20240509daypre",
+                "record_sha256": null,
+                "note": "NOAA daypre proton-event probability: 50%"
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "unknown",
+            "overlap_minutes": 0,
+            "confidence": "низкая",
+            "confidence_basis": "Подходящие орбитальные элементы отсутствуют.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 0 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "0",
+                "unit": "мин пересечения",
+                "observed_at": "2024-05-11T11:00:00Z",
+                "published_at": null,
+                "source_name": "Орбитальные данные недоступны",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-52ddd56163e8",
+                "record_sha256": null,
+                "note": "Расчёт не выполнен; нулевое пересечение не предполагается."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "start": "2024-05-11T11:30:00Z",
+        "end": "2024-05-11T15:30:00Z",
+        "severity": "high",
+        "completeness": "частичное покрытие",
+        "score": 300,
+        "factors": [
+          {
+            "factor_id": "space-weather-proton",
+            "name": "Прогноз протонного события",
+            "mechanism": "Космическая погода: PROTON",
+            "severity": "high",
+            "overlap_minutes": 240,
+            "confidence": "средняя",
+            "confidence_basis": "Оперативное или архивное сообщение NOAA с идентификатором записи.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Окно пересекает интервал PROTON на 240 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA PROTON",
+                "value": "50%",
+                "unit": null,
+                "observed_at": "2024-05-11T00:00:00Z",
+                "published_at": "2024-05-09T22:12:00Z",
+                "source_name": "NOAA NCEI daypre",
+                "source_url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/",
+                "record_id": "20240509daypre",
+                "record_sha256": null,
+                "note": "NOAA daypre proton-event probability: 50%"
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "unknown",
+            "overlap_minutes": 0,
+            "confidence": "низкая",
+            "confidence_basis": "Подходящие орбитальные элементы отсутствуют.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 0 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "0",
+                "unit": "мин пересечения",
+                "observed_at": "2024-05-11T11:30:00Z",
+                "published_at": null,
+                "source_name": "Орбитальные данные недоступны",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-52ddd56163e8",
+                "record_sha256": null,
+                "note": "Расчёт не выполнен; нулевое пересечение не предполагается."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "start": "2024-05-11T12:00:00Z",
+        "end": "2024-05-11T16:00:00Z",
+        "severity": "high",
+        "completeness": "частичное покрытие",
+        "score": 300,
+        "factors": [
+          {
+            "factor_id": "space-weather-proton",
+            "name": "Прогноз протонного события",
+            "mechanism": "Космическая погода: PROTON",
+            "severity": "high",
+            "overlap_minutes": 240,
+            "confidence": "средняя",
+            "confidence_basis": "Оперативное или архивное сообщение NOAA с идентификатором записи.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Окно пересекает интервал PROTON на 240 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA PROTON",
+                "value": "50%",
+                "unit": null,
+                "observed_at": "2024-05-11T00:00:00Z",
+                "published_at": "2024-05-09T22:12:00Z",
+                "source_name": "NOAA NCEI daypre",
+                "source_url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/",
+                "record_id": "20240509daypre",
+                "record_sha256": null,
+                "note": "NOAA daypre proton-event probability: 50%"
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "unknown",
+            "overlap_minutes": 0,
+            "confidence": "низкая",
+            "confidence_basis": "Подходящие орбитальные элементы отсутствуют.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 0 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "0",
+                "unit": "мин пересечения",
+                "observed_at": "2024-05-11T12:00:00Z",
+                "published_at": null,
+                "source_name": "Орбитальные данные недоступны",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-52ddd56163e8",
+                "record_sha256": null,
+                "note": "Расчёт не выполнен; нулевое пересечение не предполагается."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "start": "2024-05-11T12:30:00Z",
+        "end": "2024-05-11T16:30:00Z",
+        "severity": "high",
+        "completeness": "частичное покрытие",
+        "score": 300,
+        "factors": [
+          {
+            "factor_id": "space-weather-proton",
+            "name": "Прогноз протонного события",
+            "mechanism": "Космическая погода: PROTON",
+            "severity": "high",
+            "overlap_minutes": 240,
+            "confidence": "средняя",
+            "confidence_basis": "Оперативное или архивное сообщение NOAA с идентификатором записи.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Окно пересекает интервал PROTON на 240 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA PROTON",
+                "value": "50%",
+                "unit": null,
+                "observed_at": "2024-05-11T00:00:00Z",
+                "published_at": "2024-05-09T22:12:00Z",
+                "source_name": "NOAA NCEI daypre",
+                "source_url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/",
+                "record_id": "20240509daypre",
+                "record_sha256": null,
+                "note": "NOAA daypre proton-event probability: 50%"
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "unknown",
+            "overlap_minutes": 0,
+            "confidence": "низкая",
+            "confidence_basis": "Подходящие орбитальные элементы отсутствуют.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 0 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "0",
+                "unit": "мин пересечения",
+                "observed_at": "2024-05-11T12:30:00Z",
+                "published_at": null,
+                "source_name": "Орбитальные данные недоступны",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-52ddd56163e8",
+                "record_sha256": null,
+                "note": "Расчёт не выполнен; нулевое пересечение не предполагается."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "start": "2024-05-11T13:00:00Z",
+        "end": "2024-05-11T17:00:00Z",
+        "severity": "high",
+        "completeness": "частичное покрытие",
+        "score": 300,
+        "factors": [
+          {
+            "factor_id": "space-weather-proton",
+            "name": "Прогноз протонного события",
+            "mechanism": "Космическая погода: PROTON",
+            "severity": "high",
+            "overlap_minutes": 240,
+            "confidence": "средняя",
+            "confidence_basis": "Оперативное или архивное сообщение NOAA с идентификатором записи.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Окно пересекает интервал PROTON на 240 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA PROTON",
+                "value": "50%",
+                "unit": null,
+                "observed_at": "2024-05-11T00:00:00Z",
+                "published_at": "2024-05-09T22:12:00Z",
+                "source_name": "NOAA NCEI daypre",
+                "source_url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/",
+                "record_id": "20240509daypre",
+                "record_sha256": null,
+                "note": "NOAA daypre proton-event probability: 50%"
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "unknown",
+            "overlap_minutes": 0,
+            "confidence": "низкая",
+            "confidence_basis": "Подходящие орбитальные элементы отсутствуют.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 0 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "0",
+                "unit": "мин пересечения",
+                "observed_at": "2024-05-11T13:00:00Z",
+                "published_at": null,
+                "source_name": "Орбитальные данные недоступны",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-52ddd56163e8",
+                "record_sha256": null,
+                "note": "Расчёт не выполнен; нулевое пересечение не предполагается."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "start": "2024-05-11T13:30:00Z",
+        "end": "2024-05-11T17:30:00Z",
+        "severity": "high",
+        "completeness": "частичное покрытие",
+        "score": 300,
+        "factors": [
+          {
+            "factor_id": "space-weather-proton",
+            "name": "Прогноз протонного события",
+            "mechanism": "Космическая погода: PROTON",
+            "severity": "high",
+            "overlap_minutes": 240,
+            "confidence": "средняя",
+            "confidence_basis": "Оперативное или архивное сообщение NOAA с идентификатором записи.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Окно пересекает интервал PROTON на 240 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA PROTON",
+                "value": "50%",
+                "unit": null,
+                "observed_at": "2024-05-11T00:00:00Z",
+                "published_at": "2024-05-09T22:12:00Z",
+                "source_name": "NOAA NCEI daypre",
+                "source_url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/",
+                "record_id": "20240509daypre",
+                "record_sha256": null,
+                "note": "NOAA daypre proton-event probability: 50%"
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "unknown",
+            "overlap_minutes": 0,
+            "confidence": "низкая",
+            "confidence_basis": "Подходящие орбитальные элементы отсутствуют.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 0 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "0",
+                "unit": "мин пересечения",
+                "observed_at": "2024-05-11T13:30:00Z",
+                "published_at": null,
+                "source_name": "Орбитальные данные недоступны",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-52ddd56163e8",
+                "record_sha256": null,
+                "note": "Расчёт не выполнен; нулевое пересечение не предполагается."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "start": "2024-05-11T14:00:00Z",
+        "end": "2024-05-11T18:00:00Z",
+        "severity": "high",
+        "completeness": "частичное покрытие",
+        "score": 300,
+        "factors": [
+          {
+            "factor_id": "space-weather-proton",
+            "name": "Прогноз протонного события",
+            "mechanism": "Космическая погода: PROTON",
+            "severity": "high",
+            "overlap_minutes": 240,
+            "confidence": "средняя",
+            "confidence_basis": "Оперативное или архивное сообщение NOAA с идентификатором записи.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Окно пересекает интервал PROTON на 240 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA PROTON",
+                "value": "50%",
+                "unit": null,
+                "observed_at": "2024-05-11T00:00:00Z",
+                "published_at": "2024-05-09T22:12:00Z",
+                "source_name": "NOAA NCEI daypre",
+                "source_url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/",
+                "record_id": "20240509daypre",
+                "record_sha256": null,
+                "note": "NOAA daypre proton-event probability: 50%"
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "unknown",
+            "overlap_minutes": 0,
+            "confidence": "низкая",
+            "confidence_basis": "Подходящие орбитальные элементы отсутствуют.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 0 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "0",
+                "unit": "мин пересечения",
+                "observed_at": "2024-05-11T14:00:00Z",
+                "published_at": null,
+                "source_name": "Орбитальные данные недоступны",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-52ddd56163e8",
+                "record_sha256": null,
+                "note": "Расчёт не выполнен; нулевое пересечение не предполагается."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "start": "2024-05-11T14:30:00Z",
+        "end": "2024-05-11T18:30:00Z",
+        "severity": "high",
+        "completeness": "частичное покрытие",
+        "score": 300,
+        "factors": [
+          {
+            "factor_id": "space-weather-proton",
+            "name": "Прогноз протонного события",
+            "mechanism": "Космическая погода: PROTON",
+            "severity": "high",
+            "overlap_minutes": 240,
+            "confidence": "средняя",
+            "confidence_basis": "Оперативное или архивное сообщение NOAA с идентификатором записи.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Окно пересекает интервал PROTON на 240 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA PROTON",
+                "value": "50%",
+                "unit": null,
+                "observed_at": "2024-05-11T00:00:00Z",
+                "published_at": "2024-05-09T22:12:00Z",
+                "source_name": "NOAA NCEI daypre",
+                "source_url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/",
+                "record_id": "20240509daypre",
+                "record_sha256": null,
+                "note": "NOAA daypre proton-event probability: 50%"
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "unknown",
+            "overlap_minutes": 0,
+            "confidence": "низкая",
+            "confidence_basis": "Подходящие орбитальные элементы отсутствуют.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 0 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "0",
+                "unit": "мин пересечения",
+                "observed_at": "2024-05-11T14:30:00Z",
+                "published_at": null,
+                "source_name": "Орбитальные данные недоступны",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-52ddd56163e8",
+                "record_sha256": null,
+                "note": "Расчёт не выполнен; нулевое пересечение не предполагается."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "start": "2024-05-11T15:00:00Z",
+        "end": "2024-05-11T19:00:00Z",
+        "severity": "high",
+        "completeness": "частичное покрытие",
+        "score": 300,
+        "factors": [
+          {
+            "factor_id": "space-weather-proton",
+            "name": "Прогноз протонного события",
+            "mechanism": "Космическая погода: PROTON",
+            "severity": "high",
+            "overlap_minutes": 240,
+            "confidence": "средняя",
+            "confidence_basis": "Оперативное или архивное сообщение NOAA с идентификатором записи.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Окно пересекает интервал PROTON на 240 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA PROTON",
+                "value": "50%",
+                "unit": null,
+                "observed_at": "2024-05-11T00:00:00Z",
+                "published_at": "2024-05-09T22:12:00Z",
+                "source_name": "NOAA NCEI daypre",
+                "source_url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/",
+                "record_id": "20240509daypre",
+                "record_sha256": null,
+                "note": "NOAA daypre proton-event probability: 50%"
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "unknown",
+            "overlap_minutes": 0,
+            "confidence": "низкая",
+            "confidence_basis": "Подходящие орбитальные элементы отсутствуют.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 0 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "0",
+                "unit": "мин пересечения",
+                "observed_at": "2024-05-11T15:00:00Z",
+                "published_at": null,
+                "source_name": "Орбитальные данные недоступны",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-52ddd56163e8",
+                "record_sha256": null,
+                "note": "Расчёт не выполнен; нулевое пересечение не предполагается."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "start": "2024-05-11T15:30:00Z",
+        "end": "2024-05-11T19:30:00Z",
+        "severity": "high",
+        "completeness": "частичное покрытие",
+        "score": 300,
+        "factors": [
+          {
+            "factor_id": "space-weather-proton",
+            "name": "Прогноз протонного события",
+            "mechanism": "Космическая погода: PROTON",
+            "severity": "high",
+            "overlap_minutes": 240,
+            "confidence": "средняя",
+            "confidence_basis": "Оперативное или архивное сообщение NOAA с идентификатором записи.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Окно пересекает интервал PROTON на 240 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA PROTON",
+                "value": "50%",
+                "unit": null,
+                "observed_at": "2024-05-11T00:00:00Z",
+                "published_at": "2024-05-09T22:12:00Z",
+                "source_name": "NOAA NCEI daypre",
+                "source_url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/",
+                "record_id": "20240509daypre",
+                "record_sha256": null,
+                "note": "NOAA daypre proton-event probability: 50%"
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "unknown",
+            "overlap_minutes": 0,
+            "confidence": "низкая",
+            "confidence_basis": "Подходящие орбитальные элементы отсутствуют.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 0 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "0",
+                "unit": "мин пересечения",
+                "observed_at": "2024-05-11T15:30:00Z",
+                "published_at": null,
+                "source_name": "Орбитальные данные недоступны",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-52ddd56163e8",
+                "record_sha256": null,
+                "note": "Расчёт не выполнен; нулевое пересечение не предполагается."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "start": "2024-05-11T16:00:00Z",
+        "end": "2024-05-11T20:00:00Z",
+        "severity": "high",
+        "completeness": "частичное покрытие",
+        "score": 300,
+        "factors": [
+          {
+            "factor_id": "space-weather-proton",
+            "name": "Прогноз протонного события",
+            "mechanism": "Космическая погода: PROTON",
+            "severity": "high",
+            "overlap_minutes": 240,
+            "confidence": "средняя",
+            "confidence_basis": "Оперативное или архивное сообщение NOAA с идентификатором записи.",
+            "applied_rule": "Вероятность >= 50%: высокий уровень; >= 25%: требует внимания.",
+            "decision_relevant": true,
+            "summary": "Окно пересекает интервал PROTON на 240 мин.",
+            "limitations": [
+              "Отсутствие записи не доказывает отсутствие воздействия вне охвата продукта.",
+              "Показатель внешней среды не является оценкой индивидуальной дозы или допуска к ВКД."
+            ],
+            "evidence": [
+              {
+                "kind": "external_forecast",
+                "title": "NOAA PROTON",
+                "value": "50%",
+                "unit": null,
+                "observed_at": "2024-05-11T00:00:00Z",
+                "published_at": "2024-05-09T22:12:00Z",
+                "source_name": "NOAA NCEI daypre",
+                "source_url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/",
+                "record_id": "20240509daypre",
+                "record_sha256": null,
+                "note": "NOAA daypre proton-event probability: 50%"
+              }
+            ]
+          },
+          {
+            "factor_id": "orbital-lighting",
+            "name": "Переход в орбитальную тень",
+            "mechanism": "Орбитальные условия",
+            "severity": "unknown",
+            "overlap_minutes": 0,
+            "confidence": "низкая",
+            "confidence_basis": "Подходящие орбитальные элементы отсутствуют.",
+            "applied_rule": "Тень влияет на выбор только при включённом требовании непрерывного освещения; любое пересечение тогда требует внимания.",
+            "decision_relevant": false,
+            "summary": "Ожидается 0 мин модельной тени; это информационное условие и оно не повышает риск без ограничения работ.",
+            "limitations": [
+              "Это ограничение работ, а не самостоятельное доказательство опасности.",
+              "Цилиндрическая модель тени не учитывает полутень и конкретную геометрию места работ."
+            ],
+            "evidence": [
+              {
+                "kind": "derived_signal",
+                "title": "Расчёт освещённости",
+                "value": "0",
+                "unit": "мин пересечения",
+                "observed_at": "2024-05-11T16:00:00Z",
+                "published_at": null,
+                "source_name": "Орбитальные данные недоступны",
+                "source_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544",
+                "record_id": "shadow-52ddd56163e8",
+                "record_sha256": null,
+                "note": "Расчёт не выполнен; нулевое пересечение не предполагается."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "source_status": [
+      {
+        "source_id": "noaa-daypre",
+        "name": "NOAA NCEI archived daypre",
+        "status": "archive",
+        "last_success": "2024-05-09T22:12:00Z",
+        "age_minutes": 0,
+        "is_synthetic": false,
+        "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/",
+        "sha256": "22af1782371cdebe283c60bca677c19d75765b327051cfa32e6e7f454bc5fc87",
+        "product_timestamp": "2024-05-09T22:12:00Z",
+        "product_age_minutes": 2148,
+        "coverage": "суточная вероятность протонного события"
+      },
+      {
+        "source_id": "historical-orbit",
+        "name": "Historical ISS orbit archive",
+        "status": "unavailable",
+        "last_success": null,
+        "age_minutes": 0,
+        "is_synthetic": false,
+        "url": null,
+        "sha256": null,
+        "product_timestamp": null,
+        "product_age_minutes": null,
+        "coverage": "нет подходящих орбитальных данных"
+      }
+    ],
+    "trajectory": {
+      "source": "Орбитальная траектория недоступна",
+      "norad_id": 25544,
+      "epoch": null,
+      "propagator": "unavailable",
+      "coordinate_frame": null,
+      "time_scale": "UTC",
+      "gravity_model": null,
+      "points": null,
+      "shadow_intervals": [],
+      "min_altitude_km": null,
+      "max_altitude_km": null,
+      "valid_points": 0
+    },
+    "historical_cutoff": "2024-05-10T12:00:00Z",
+    "evaluation_mode": "replay_strict",
+    "verification": {
+      "status": "verified_against_later_observation",
+      "forecast": "Вероятность NOAA daypre: 50%",
+      "observation": "Наблюдалось событие >10 MeV; пик 207 pfu",
+      "observation_source": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/weekly_reports/PRFs_of_SGD/2024/05/prf2541.pdf",
+      "note": "Наблюдение используется только после расчёта для проверки и не влияет на replay-рекомендацию."
+    },
+    "operational_status": "HOLD_RADIATION",
+    "operator_action": "Приостановить выбор окна до оценки радиационного специалиста и проверки бортовой дозиметрии.",
+    "risk_domains": [
+      {
+        "id": "radiation",
+        "name": "Радиационная обстановка",
+        "basis": "NOAA S-scale, прогноз S1+ и введённая дозиметрия",
+        "status": "review",
+        "limitation": "Открытые данные не являются индивидуальной дозой; решение использует отдельно введённую телеметрию."
+      },
+      {
+        "id": "communications",
+        "name": "Связь и навигация",
+        "basis": "NOAA G/R",
+        "status": "monitor",
+        "limitation": "Не является прогнозом отказа конкретного канала."
+      },
+      {
+        "id": "lighting",
+        "name": "Освещённость",
+        "basis": "SGP4 и модель тени",
+        "status": "monitor",
+        "limitation": "Не включает полутень, локальную геометрию и тепловой режим."
+      },
+      {
+        "id": "data",
+        "name": "Полнота данных",
+        "basis": "Актуальность и provenance",
+        "status": "verified",
+        "limitation": "Публичные источники не заменяют сертифицированные контуры управления."
+      }
+    ],
+    "decision_gates": [
+      {
+        "id": "sources",
+        "label": "Критичные источники доступны",
+        "passed": true,
+        "blocking": true
+      },
+      {
+        "id": "policy",
+        "label": "Применена политика demo-policy-2026-09",
+        "passed": true,
+        "blocking": true
+      },
+      {
+        "id": "dosimetry",
+        "label": "Дозиметрия и порог политики актуальны (не старше 30 мин)",
+        "passed": false,
+        "blocking": true
+      },
+      {
+        "id": "operation",
+        "label": "Профиль операции: standard_eva",
+        "passed": true,
+        "blocking": true
+      }
+    ],
+    "decision_confidence": "gates_open",
+    "result_id": "15d9320573661513"
+  }
+}

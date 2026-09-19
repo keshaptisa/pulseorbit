@@ -1,0 +1,71 @@
+:Product: 3-day Space Weather Predictions daypre.txt
+:Issued: 2024 May 03 2200 UTC
+# Prepared by the US Dept. of Commerce, NOAA, Space Weather Prediction Center
+# Product description and SWPC contact on the Web
+# http://www.swpc.noaa.gov/wwire.html
+#
+#             3-day Space Weather Predictions
+#
+:Prediction_dates:   2024 May 04   2024 May 05   2024 May 06
+:Geomagnetic_A_indices:
+A_Fredericksburg         13            14            24
+A_Planetary              15            20            35
+#
+# Predicted 3-hour Middle latitude k-indices
+:Pred_Mid_k:
+Mid/00-03UT               3             3             4
+Mid/03-06UT               3             3             5
+Mid/06-09UT               3             3             5
+Mid/09-12UT               3             2             4
+Mid/12-15UT               2             2             3
+Mid/15-18UT               2             2             3
+Mid/18-21UT               3             3             2
+Mid/21-00UT               3             4             2
+#
+# Predicted 3-hour High latitude k-indices
+:Pred_High_k:
+High/00-03UT              3             3             4
+High/03-06UT              2             3             5
+High/06-09UT              3             3             6
+High/09-12UT              4             4             6
+High/12-15UT              3             3             5
+High/15-18UT              3             4             5
+High/18-21UT              3             3             2
+High/21-00UT              2             3             2
+#
+# Probability of Geomagnetic conditions at Middle Latitude
+:Prob_Mid:
+Mid/Active               35            35            30
+Mid/Minor_Storm          20            35            40
+Mid/Major-Severe_Storm    5            20            25
+#
+# Probability of Geomagnetic conditions at High Latitudes
+:Prob_High:
+High/Active              10             5             5
+High/Minor_Storm         25            20            15
+High/Major-Severe_Storm  50            75            80
+#
+# Polar Cap Absorption Forecast
+:Polar_cap:
+                      green
+#
+# Solar
+:10cm_flux:
+                        158           155           160
+#
+:Whole_Disk_Flare_Prob:
+Class_M                  75            75            75
+Class_X                  25            25            25
+Proton                   15            15            15
+#
+# Region Flare Probabilities for 2024 May 04
+# Region     Class C      M             X             P
+:Reg_Prob: 2024 May 03
+  3654          0         0             0             0
+  3655          0         0             0             0
+  3661         15         1             1             1
+  3662         35         5             1             1
+  3663         95        65            25            10
+  3664         75        25             5             5
+  3665         10         1             1             1
+  3666         30         5             1             1

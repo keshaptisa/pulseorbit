@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Пульс Орбиты</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css?v=20260920-final">
+  <link rel="stylesheet" href="/static/status.css?v=20260920-final">
+</head>
+<body>
+  <header class="topbar">
+    <canvas id="starfield" aria-hidden="true"></canvas>
+    <div class="topbar-brand">
+      <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="20" cy="20" r="19" stroke="#ffffff" stroke-width="1.4" opacity=".5"/>
+        <ellipse cx="20" cy="20" rx="19" ry="7" stroke="#ffffff" stroke-width="1.2" opacity=".4" transform="rotate(-18 20 20)"/>
+        <circle cx="20" cy="20" r="6.5" fill="#ffffff"/>
+        <circle cx="30" cy="12" r="1.6" fill="#ffffff"/>
+      </svg>
+      <div class="brand-text"><strong>ПУЛЬС ОРБИТЫ</strong></div>
+    </div>
+    <div class="topbar-actions">
+      <button type="button" id="openParams" class="params-btn">Параметры окна</button>
+      <button type="button" id="navToggle" class="nav-toggle" aria-label="Разделы отчёта" aria-expanded="false" aria-controls="sectionNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <nav id="sectionNav" class="section-nav" aria-label="Разделы отчёта" hidden></nav>
+  <div id="navScrim" class="nav-scrim" hidden></div>
+  <div class="toolbar">
+    <div id="jobProgress" class="job-progress" hidden><span></span></div><div id="jobStatus" class="job-status" role="status" aria-live="polite"></div>
+  </div>
+  <main>
+    <section class="workspace">
+      <div class="heading"><div><p class="eyebrow">Сравнение вариантов</p><h2 id="recommendation">Задайте параметры расчёта</h2></div><div class="actions"><button id="exportBtn" class="secondary" disabled>JSON</button><button id="csvBtn" class="secondary" disabled>CSV</button><button id="packageBtn" class="secondary" disabled>ZIP-отчёт</button></div></div>
+      <div id="rationale" class="rationale"></div>
+      <div id="dataNotice" class="data-banner"></div>
+      <section id="operatorDecision" class="operator-decision" aria-labelledby="operatorTitle">
+        <div><p class="eyebrow">Операторский контур</p><h3 id="operatorTitle">Статус решения</h3><strong id="operatorStatus">Расчёт ещё не выполнен</strong></div>
+        <p id="operatorAction">После расчёта появится обязательное действие и ограничения интерпретации.</p>
+      </section>
+      <section aria-labelledby="riskDomainsTitle"><div class="section-head"><h3 id="riskDomainsTitle">Риски по доменам</h3><span>Среда, а не разрешение на ВКД</span></div><div id="riskDomains" class="risk-domains"></div></section>
+      <section aria-labelledby="gatesTitle"><div class="section-head"><h3 id="gatesTitle">Готовность решения</h3><span id="decisionConfidence">Проверка обязательных условий</span></div><div id="decisionGates" class="decision-gates"></div></section>
+      <div id="summary" class="summary-grid"></div>
+      <div id="baseline" class="baseline-panel"></div>
+      <section aria-labelledby="preferredTitle"><div class="section-head"><h3 id="preferredTitle">Предпочтительные варианты</h3><span>До трёх вариантов с явным объяснением</span></div><div id="preferredWindows" class="preferred-grid"></div></section>
+      <section id="verificationSection" hidden aria-labelledby="verificationTitle"><h3 id="verificationTitle">Проверка прогноза</h3><div id="verification" class="verification-panel"></div></section>
+      <section aria-labelledby="sourcesTitle"><h3 id="sourcesTitle">Источники и актуальность</h3><div id="sources" class="source-strip"></div></section>
+      <section aria-labelledby="timelineTitle"><h3 id="timelineTitle">Временная картина</h3><div id="timeline" class="timeline empty">Расчёт ещё не выполнен</div></section>
+      <section aria-labelledby="lightingTitle"><div class="section-head"><h3 id="lightingTitle">Освещённость на траектории</h3><span>Цилиндрическая модель тени, шаг SGP4 10 минут</span></div><div id="lightingTimeline" class="lighting-panel empty">Орбитальный расчёт ещё не выполнен</div><p class="mechanism-note">Освещённость выбрана как простой и полностью проверяемый второй механизм: она важна для видимости и рабочего ограничения, но не заменяет тепловую модель скафандра и влияет на выбор только при требовании непрерывного света.</p></section>
+      <section aria-labelledby="windowsTitle"><div class="section-head"><h3 id="windowsTitle">Окна одинаковой длительности</h3><span>Нажмите строку, чтобы изучить факторы</span></div><div id="windows" class="table-wrap"></div></section>
+      <section aria-labelledby="matrixTitle"><div class="section-head"><h3 id="matrixTitle">Матрица факторов</h3><span>Причины различий между окнами</span></div><div id="factorMatrix" class="table-wrap"></div></section>
+      <section aria-labelledby="evidenceTitle"><div class="section-head"><h3 id="evidenceTitle">Факторы выбранного окна</h3><strong id="selectedWindow"></strong></div><div id="evidence" class="evidence-grid"></div></section>
+    </section>
+  </main>
+  <dialog id="paramsDialog" class="params-dialog" aria-labelledby="paramsTitle">
+    <div class="params-head">
+      <h1 id="paramsTitle">Параметры окна</h1>
+      <button type="button" id="closeParams" class="params-close" aria-label="Закрыть">&times;</button>
+    </div>
+    <div class="params-body">
+      <form id="requestForm">
+        <label>Режим<select id="mode"><option value="current">Текущая обстановка</option><option value="historical">Исторический разбор</option><option value="replay">Прогноз из прошлого</option></select></label>
+        <label>Начало, UTC<input id="start" type="datetime-local" required></label>
+        <label id="cutoffLabel" hidden>Cutoff публикаций, UTC<input id="cutoff" type="datetime-local"></label>
+        <label>Длительность, ч<input id="duration" type="number" min="1" max="8" step="0.5" value="4"></label>
+        <label>Диапазон поиска, ч<input id="search" type="number" min="0" max="24" step="1" value="6"></label>
+        <label>Шаг вариантов<select id="step"><option value="15">15 минут</option><option value="30" selected>30 минут</option><option value="60">60 минут</option></select></label>
+        <fieldset><legend>Ограничения работ</legend><label class="check"><input id="lightingRequired" type="checkbox"> Требуется непрерывное освещение</label></fieldset>
+        <details class="operation-profile" open><summary>Профиль операции и политика</summary>
+          <label>Профиль ВКД<input id="operationProfile" type="text" value="standard_eva" required></label>
+          <label>Версия утверждённой политики<input id="policyVersion" type="text" value="demo-policy-2026-09" required></label>
+          <p class="field-note">Без этих трёх полей решение остаётся заблокированным: расчёт не подставляет дозиметрию сам.</p>
+          <label>Доза, мкЗв/ч<input id="doseRate" type="number" min="0" step="0.01" placeholder="Например, 12"></label>
+          <label>Порог политики, мкЗв/ч<input id="doseLimit" type="number" min="0.01" step="0.01" placeholder="Например, 100"></label>
+          <label>Время измерения, UTC
+            <span class="field-row">
+              <input id="doseTimestamp" type="datetime-local">
+              <button type="button" id="doseNow" class="field-btn">Сейчас</button>
+            </span>
+            <small class="field-hint">Измерение должно быть не старше 30 минут.</small>
+          </label>
+        </details>
+        <details class="diagnostics"><summary>Диагностика источников</summary><fieldset><legend>Проверка отказов</legend><label class="check"><input id="disableNoaa" type="checkbox"> Отключить NOAA</label><label class="check"><input id="disableOrbit" type="checkbox"> Отключить орбиту</label></fieldset><label class="check refresh-check"><input id="forceRefresh" type="checkbox"> Принудительно обновить источники</label></details>
+        <button type="submit">Рассчитать окна</button>
+      </form>
+      <div class="notice"><strong>Исследовательский режим</strong><p>Расчёт использует открытые данные NOAA и CelesTrak. Результат не является разрешением на проведение ВКД.</p></div>
+    </div>
+  </dialog>
+  <script src="/static/app.js?v=20260920-final"></script>
+</body>
+</html>

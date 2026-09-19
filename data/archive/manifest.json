@@ -1,0 +1,333 @@
+[
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240501daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/05/20240501daypre.txt",
+    "sha256": "8be4bb090aebf3c9bc9894a56372d08764153a80ce7b260e5a0e491ee8a529d6"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240502daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/05/20240502daypre.txt",
+    "sha256": "cadaeb8c2ebcfaa0a0b9599a8629969bc3c9d4d4d89f3e245346efb4f2e5b7d7"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240503daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/05/20240503daypre.txt",
+    "sha256": "45ddb3f9cf267edf90ef4ad033093e8f1f39dc8824e067507d731f0ae7499a98"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240504daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/05/20240504daypre.txt",
+    "sha256": "be294b1222dde352bd468ce858fc1b4c8022875ddb90dcdbd5ff47782de5305c"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240505daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/05/20240505daypre.txt",
+    "sha256": "83051f86707ff95d888cdd1a7d0cabae2c4f513dda5481bb32ac57e15ca2774c"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240506daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/05/20240506daypre.txt",
+    "sha256": "d88777548f2e13a128ee8ce28bfbcfe3a81149c3823a97523826479bd1103787"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240507daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/05/20240507daypre.txt",
+    "sha256": "6b5201a86459db5d19d8436441bc985c4831d7f1ddfc02965f01af01c73d8f58"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240508daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/05/20240508daypre.txt",
+    "sha256": "a9c10352baf09219669386727117c640727fa6b0b1bd3b8ccee05c5cb4f7ea38"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240509daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/05/20240509daypre.txt",
+    "sha256": "22af1782371cdebe283c60bca677c19d75765b327051cfa32e6e7f454bc5fc87"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240510daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/05/20240510daypre.txt",
+    "sha256": "e8f56a1bf0cfb55f86f31ac568a137a05851b8d205d018b329cd3ff830800380"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240511daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/05/20240511daypre.txt",
+    "sha256": "6973dc3828c7fe0617cfe3f96f03fe93c153a3bc8814271c1bacbc5769906fdd"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240512daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/05/20240512daypre.txt",
+    "sha256": "47bd5564e027761fe7fce69c44f4541ada5d969654ed38b83199a9e7e2568bb6"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240513daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/05/20240513daypre.txt",
+    "sha256": "87d7212c93b409245fd3be4f5b35001c742cfa1d98ee6331837ab5a7dfdd6ffa"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240514daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/05/20240514daypre.txt",
+    "sha256": "dc68722924b228fe5636fe733acb5039d35cfb4e0b15335bdb2d9fea0750afdc"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240515daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/05/20240515daypre.txt",
+    "sha256": "d8f7d19a071e7183ff6bfb80118f80677c9f955244fe6cd28867b963698da033"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240516daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/05/20240516daypre.txt",
+    "sha256": "0bfdbcbfbe7db6bdfff238f3deded522c4a9e80725151e266ea5e42d527793e8"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240517daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/05/20240517daypre.txt",
+    "sha256": "a8150f007786eda520530c58cec7d1ad25d2615d28266f417925b60ce37a080c"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240518daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/05/20240518daypre.txt",
+    "sha256": "1fbfddac5d55df97530713891585c97e5399ae686774133baf60e46c4be6dd8b"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240519daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/05/20240519daypre.txt",
+    "sha256": "b909ac8a5379edc8a318e47729c61a64de724737045f40b5ca9d9da1a83a11f6"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240520daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/05/20240520daypre.txt",
+    "sha256": "615539f4037f9bac21cfa71b94a001d58a09e53ef7cf69d1a0c0b4852e535054"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240521daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/05/20240521daypre.txt",
+    "sha256": "d6208a2f9106c6882cd4545d70385ef4e7c78327f50ca9e4f2040d8d82e37ba8"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240522daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/05/20240522daypre.txt",
+    "sha256": "6a8cbbc06148810b7734d941dfbd2fc69288752d78387b1f1d45de493a7e2687"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240523daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/05/20240523daypre.txt",
+    "sha256": "2fe33e974121d35ee42fb1ae83f628ce8bd3337671130731e25bb3884b2e2394"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240524daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/05/20240524daypre.txt",
+    "sha256": "47691f7142112c5417e724f5b10977b6cf59b50ad078a7f48653efba9f36891b"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240525daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/05/20240525daypre.txt",
+    "sha256": "a74e9615eb4b02c4e4cd4899249d3a1f1d0e1dd05f1742ba81dbd01d10051d00"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240526daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/05/20240526daypre.txt",
+    "sha256": "d464a024605b57693429da834cc20720924b947a27c14916bfefba8d25c436ae"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240527daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/05/20240527daypre.txt",
+    "sha256": "1a0cad00a640a0510cdac246f26e84d695fd080201827eb713ba39b14657da59"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240528daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/05/20240528daypre.txt",
+    "sha256": "c10a072f21279f1d91ba2206b2d5f96b1bc10a0c90f2468a8fcb4639dd3f1aad"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240529daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/05/20240529daypre.txt",
+    "sha256": "1e0efa3447e0716503f16ca2efb573bae8bb50ecd5403a126cd1c5c0e60f47bf"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240530daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/05/20240530daypre.txt",
+    "sha256": "48dedfc148588893e6584354a21a03d1504e431da44c17754c598c4f2067cc61"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240531daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/05/20240531daypre.txt",
+    "sha256": "4d99b5ae869b775f9e1cc8228747a195ae530b3f05477b9d7383eb6732d5c00e"
+  },
+  {
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/06/20240601daypre.txt",
+    "status": 404,
+    "missing": true
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240602daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/06/20240602daypre.txt",
+    "sha256": "fe2614d6dfd658eb9cf48a11b0995f1bc2a6e2ea0d4e4c90b4226464e7a20456"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240603daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/06/20240603daypre.txt",
+    "sha256": "5a4d50865794b2b168a5b492afa2636be8b1a0c80777297813f2f3b8ccc06798"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240604daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/06/20240604daypre.txt",
+    "sha256": "b54af7b2b2b8bd2def52574d46b7ab3977f8d80b8ef059191f8e11e8e9ae6998"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240605daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/06/20240605daypre.txt",
+    "sha256": "64f18301b88ed2496e030b5132de3e82b678071b6f1a651b8353615cbb6818e5"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240606daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/06/20240606daypre.txt",
+    "sha256": "609ec831bc86e45d6ec5d070edaa86a1a38c5de84273aa0372886522be400970"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240607daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/06/20240607daypre.txt",
+    "sha256": "949d1de81fc7ab89459b288945f89eaf82a515ff4757bd7b5e5890fd9278cdc5"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240608daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/06/20240608daypre.txt",
+    "sha256": "941145252d484f93f1e7c613a94ba391dac1b3e65400150ce3e00e8b49082826"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240609daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/06/20240609daypre.txt",
+    "sha256": "2d1ff3d14c142e0b75c56ed7577c392bf098956146d4494e6231b8733587163e"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240610daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/06/20240610daypre.txt",
+    "sha256": "f1f4e1346b29e3a035a9aa03295898164cc8f29b84d9b56b175513474fa5b850"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240611daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/06/20240611daypre.txt",
+    "sha256": "427fbaef24a190634cfc438c1eb8821c4815433631a0e42fcbed839c30af14e2"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240612daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/06/20240612daypre.txt",
+    "sha256": "9a9e5613ffa6f56d8cd97282ba49e3341925821c27e855ccd62860bc1cd8802b"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240613daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/06/20240613daypre.txt",
+    "sha256": "a843a32598e0d5166c9a3f6943ce2a6b26de8216b37382004ab852ff07b46d15"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240614daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/06/20240614daypre.txt",
+    "sha256": "5c3c1b95d94f182359210c7772f5585ec15773794d08b9b4676c88cf067816ab"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240615daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/06/20240615daypre.txt",
+    "sha256": "f27732d5f433a5da542bcc2ef325294fea9852502d99deff0f3d7ca54670d2ba"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240616daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/06/20240616daypre.txt",
+    "sha256": "c3da3696e764a8f5dc5229132ac85d2ea300275b9de57088d6064710df50cc53"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240617daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/06/20240617daypre.txt",
+    "sha256": "27bbc83add73ce7b298aa79224cc773c59776a2a849e4cc348038e83f75c9852"
+  },
+  {
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/06/20240618daypre.txt",
+    "status": 404,
+    "missing": true
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240619daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/06/20240619daypre.txt",
+    "sha256": "b652d0c76e8afbf710e24e2ad9ea0cdb14c25ae98261f8bc0cee6e86041cc37a"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240620daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/06/20240620daypre.txt",
+    "sha256": "74bff7e95ec9f6dfebfeeefbcd31ccb6d91d8f89504b07c52d317b858c0d1505"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240621daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/06/20240621daypre.txt",
+    "sha256": "68339045724f352ac8c80fff49d10c474d2b4755d49e40f81ef7a769d8a2bfce"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240622daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/06/20240622daypre.txt",
+    "sha256": "40b9ae746fec1b38f8e9bc39d0b9f1b33e4aaa83ba85d809e2897a9f62113d15"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240623daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/06/20240623daypre.txt",
+    "sha256": "76fb068a7a464acfcb80f517e9e862b85d7ca168e0c25d35f385ba80fb6ded7c"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240624daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/06/20240624daypre.txt",
+    "sha256": "cf6aaffdd39cb3b64231051c3f5e2cf3793c7bc657d1cf3e1d3bf60f656df91a"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240625daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/06/20240625daypre.txt",
+    "sha256": "66098c2afaf9902505aa374a4a8a37636287d2df071dfe4bc3f71d60dddbf2d1"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240626daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/06/20240626daypre.txt",
+    "sha256": "0fb317086ab3bda91e1591d77af7ad3617c6e75c5cae5466524145b1b9cef045"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240627daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/06/20240627daypre.txt",
+    "sha256": "edc6384c6a191f4afd0acabae554a8df6b52039a236244d2669dcc90aece6b21"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240628daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/06/20240628daypre.txt",
+    "sha256": "1a285d02bdd30ef68c94061ed92dbffdab8a0be995e1e2a1f3877c9a42920cfe"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240629daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/06/20240629daypre.txt",
+    "sha256": "8405f8e638149f603503acb3150a6d821cfb6871e96a0164d35f73deca86bc5e"
+  },
+  {
+    "path": "data\\archive\\noaa\\daypre\\20240630daypre.txt",
+    "url": "https://www.ngdc.noaa.gov/stp/space-weather/swpc-products/daily_reports/daypre/2024/06/20240630daypre.txt",
+    "sha256": "d2d079b234f79e921e527f8dc74d86e99435f9fad0fd48dda9a8a467f1bb960b"
+  },
+  {
+    "capture": "20240504013034",
+    "url": "https://web.archive.org/web/20240504013034id_/http://celestrak.org/NORAD/elements/stations.txt",
+    "sha256": "0d41b30cfbf5472219bac65cb8c4b9e7a4046b624f6f69008ea923873afbcae9"
+  },
+  {
+    "capture": "20240504060252",
+    "url": "https://web.archive.org/web/20240504060252id_/http://celestrak.org/NORAD/elements/stations.txt",
+    "sha256": "1e7e3570524c956794ebdd84d5e5898abd1b1c5173345bbfc9a13f17c0494e4a"
+  },
+  {
+    "capture": "20240504235040",
+    "url": "https://web.archive.org/web/20240504235040id_/http://celestrak.org/NORAD/elements/stations.txt",
+    "sha256": "908cdb529f28e90e79c3f7dabce7086008ff4a21102e6e33f33dcdf68f39591b"
+  },
+  {
+    "capture": "20240506153213",
+    "url": "https://web.archive.org/web/20240506153213id_/http://celestrak.org/NORAD/elements/stations.txt",
+    "sha256": "790d9d777268c2b18acc283f73a2cbb50dba15e2be86ba97484fd6ed10a29ddc"
+  },
+  {
+    "path": "data\\archive\\orbit\\iss_sscweb_gse_20240501_20240701.json",
+    "url": "https://sscweb.gsfc.nasa.gov/WS/sscr/2/",
+    "sha256": "fe4e81abfe3f7e57c2770f5bbefa14b81f22d3663225e5312222ad957a4abd3e",
+    "note": "NASA SSCWeb ISS coordinates in GSE, sampled every 10 minutes; historical analysis only, never strict replay"
+  }
+]
